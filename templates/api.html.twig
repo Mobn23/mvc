@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>API Summary</h1>
+    <ul>
+        <li><a href="{{ path('lucky') }}">/lucky</a> - Crazy page</li>
+        <li><a href="{{ path('me') }}">/me</a> - Information about me </li>
+        <li><a href="{{ path('about') }}">/about</a> - About page </li>
+        <li><a href="{{ path('report') }}">/report</a> - Report page </li>
+        <li><a href="{{ path('quote') }}">/quote</a> - Quote page </li>
+        <li><a href="{{ path('session_display') }}">/session</a> - Session page</li>
+        <li><a href="{{ path('session_delete') }}">/session/delete</a> - Session delete</li>
+        <li><a href="{{ path('card') }}">/card</a> - Card page </li>
+        <li><a href="{{ path('card_deck') }}">/card/deck</a> - Card deck page </li>
+        <li><a href="{{ path('card_deck_shuffle') }}">/card/deck/shuffle</a> - Card deck shuffle page </li>
+        <li><a href="{{ path('card_deck_draw') }}">/card/deck/draw</a> - Card deck draw page </li>
+        <li><a href="{{ path('card_deck_draw') }}">/card/deck/draw/:num</a> - Card deck draw number page </li>
+    </ul>
+{% endblock %}

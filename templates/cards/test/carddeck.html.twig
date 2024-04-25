@@ -1,0 +1,21 @@
+{% extends "base2.html.twig" %}
+
+{% block title %}Card Game{% endblock %}
+
+{% block main %}
+    <h1>Card hand</h1>
+    <ul class="cardarea">
+        {% for suit in cardsSuits %}
+            {% set cards = suit|split('') %}
+            {% for card in cards %}
+                {% set codePoint = card|unicode_code_point %}
+                {% if codePoint >= 127153 and codePoint <= 127183 %}
+                    <li><span class="card-red">{{ card }}</span></li>
+                {% else %}
+                    <li><span class="card">{{ card }}</span></li>
+                {% endif %}
+            {% endfor %}
+            {{ dump(suit) }}
+        {% endfor %}
+    </ul>
+{% endblock %}

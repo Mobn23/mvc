@@ -1,0 +1,16 @@
+{# templates/lucky.html.twig #}
+
+{% extends "base.html.twig" %}
+
+{% block title %}Magic number{% endblock %}
+
+{% block body %}
+    <h1 class="magic-number">Magic number</h1>
+    <div class="lucky">
+        <p class="welcome">Welcome to my awesome magical homepage.</p>
+        <p class="number">This is the current magic number: {{ number }}</p>
+        <video autoplay>
+            <source src="{{ asset(videoPath) }}" type="video/mp4">
+        </video>
+    </div>
+{% endblock %}

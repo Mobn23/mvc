@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block title %}About{% endblock %}
+
+{% block body %}
+    <h1>About</h1>
+    <div class="about">
+        <div class="column">
+            <p>The MVC course focusing on teaching the Model-View-Controller (MVC) architectural pattern. MVC is a widely used design pattern in software development, particularly in web development, for structuring and organizing code in a modular and maintainable way using Symfony 7.</p>
+        </div>
+        <div <div class="column">
+            <a href="{{ asset('img/symfony.png') }}">
+                <img src="{{ asset('img/symfony.png') }}" alt="">
+            </a>
+        </div>
+    </div>
+
+    {# <img src="{{ asset('build/images/background.jpg') }}" alt=""> #}
+
+{% endblock %}
+
+{% block footer %}
+    <div class="footer">
+        <a href="https://github.com/Mobn23/mvc" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/Mobn23?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+{% endblock %}
