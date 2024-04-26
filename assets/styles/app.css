@@ -152,7 +152,7 @@ body {
     font-size: 2em;
 }*/
 main {
-  padding: 0.5em;
+  padding: 5em;
 }
 
 input {
@@ -216,4 +216,9 @@ ul.cardarea {
 
 ul.cardarea li {
   display: inline;
+}
+
+.uml {
+  display: flex;
+  justify-content: space-around;
 }

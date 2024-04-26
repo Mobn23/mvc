@@ -66,14 +66,14 @@ class CardHand
     //         'clubs' => [],
     //         'spades' => []
     //     ];
-    
+
     //     $lastCard = null; // Initialize $lastCard variable
-    
+
     //     // Iterate through each card and separate them by suit
     //     foreach ($this->hand as $card) {
     //         // Get the Unicode code point of the card
     //         $codePoint = mb_ord($card->getAsString());
-            
+
     //         // Determine the suit based on the code point range
     //         if ($codePoint >= 127153 && $codePoint <= 127167) {
     //             $suits['hearts'][] = $card;
@@ -86,7 +86,7 @@ class CardHand
     //         }
     //         $lastCard = $card; // Update $lastCard with the current card
     //     }
-    
+
     //     // Return both the sorted suits array and the last card processed
     //     return ['suits' => $suits, 'lastCard' => $lastCard];
     // }

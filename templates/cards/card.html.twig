@@ -5,9 +5,12 @@
 {% block main %}
 <h1>Card game [START]</h1>
 
-<p>Here coming my classes explanation</p>
+<p>I created Card superclass first then CardGraphic subclass and then finally HandCard class which is taking CardGraphic in construct as a Dependency injection.  </p>
+<a class="uml" href="{{ asset('img/kmom02-mvc.jpg') }}">
+    <img src="{{ asset('img/kmom02-mvc.jpg') }}" alt="">
+</a>
 
-<form method="post" action="">
+<form method="post" action="card/deck">
     <input type="submit" name="do_it" value="Start playing">
 </form>
 

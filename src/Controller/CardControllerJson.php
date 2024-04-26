@@ -35,7 +35,7 @@ class CardControllerJson extends AbstractController
         $hand->add($card);
 
         $data = [
-            "cardsSuits"=> $hand->getAllValues()
+            "cardsSuits" => $hand->getAllValues()
         ];
 
         $response = new JsonResponse($data);
@@ -57,7 +57,7 @@ class CardControllerJson extends AbstractController
         $hand->roll();
 
         $data = [
-            "cardsSuits"=> $hand->getAllValues()
+            "cardsSuits" => $hand->getAllValues()
         ];
 
         $counter = [];
@@ -69,8 +69,8 @@ class CardControllerJson extends AbstractController
                 }
             }
         }
-        
-        $session->set('remained_cards_num', count($counter)-1);
+
+        $session->set('remained_cards_num', count($counter) - 1);
 
         $response = new JsonResponse($data);
         $response->setEncodingOptions(
@@ -80,19 +80,19 @@ class CardControllerJson extends AbstractController
         return $response;
     }
 
-    #[Route("api/deck/draw", name: "api_deck_draw", methods:"POST")]
+    #[Route("api/deck/draw", name: "api_deck_draw", methods: ["GET", "POST"])]
     public function apiDeckDraw(SessionInterface $session): Response
     {
         $hand = new CardHand();
         $cardGraphic = new CardGraphic();
-        $randomCard= $cardGraphic->randomCard();
+        $randomCard = $cardGraphic->randomCard();
         $cardGraphic->setValue($randomCard);
         $hand->add($cardGraphic);
         print_r($randomCard);
 
         $data = [
-            "randomCard"=> $hand->getString(),
-            "remainedCardsQuantity"=> $cardGraphic->cardsArrayCount($randomCard)
+            "randomCard" => $hand->getString(),
+            "remainedCardsQuantity" => $cardGraphic->cardsArrayCount($randomCard)
         ];
         $sessionRemainedCards = $session->get('remained_cards_num', 0);
         $session->set('remained_cards_num', $sessionRemainedCards - 1);
@@ -105,22 +105,22 @@ class CardControllerJson extends AbstractController
         return $response;
     }
 
-    #[Route("api/deck/draw/:{num<\d+>}", name: "api_deck_draw_number", methods:"POST")]
+    #[Route("api/deck/draw/:{num<\d+>}", name: "api_deck_draw_number", methods: ["GET", "POST"])]
     public function apisDeckDraw(int $num, SessionInterface $session): Response
     {
         $hand = new CardHand();
         $cardGraphic = new CardGraphic();
-        $randomCard= $cardGraphic->chosenCards($num);
+        $randomCard = $cardGraphic->chosenCards($num);
         $cardGraphic->setValue($randomCard);
         $hand->add($cardGraphic);
         print_r($randomCard);
 
         $data = [
-            "randomCard"=> $hand->getValues(),
-            "remainedCardsQuantity"=> $cardGraphic->cardsNumberArrayCount($randomCard)
+            "randomCard" => $hand->getValues(),
+            "remainedCardsQuantity" => $cardGraphic->cardsNumberArrayCount($randomCard)
         ];
         $sessionRemainedCards = $session->get('remained_cards_num', 0);
-        $session->set('remained_cards_num', $sessionRemainedCards-$num);
+        $session->set('remained_cards_num', $sessionRemainedCards - $num);
 
         $response = new JsonResponse($data);
         $response->setEncodingOptions(

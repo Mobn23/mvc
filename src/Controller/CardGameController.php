@@ -53,7 +53,7 @@ class CardGameController extends AbstractController
         $hand->add($card);
 
         $data = [
-            "cardsSuits"=> $hand->getAllValues()
+            "cardsSuits" => $hand->getAllValues()
         ];
 
         return $this->render('cards/test/carddeck.html.twig', $data);
@@ -70,7 +70,7 @@ class CardGameController extends AbstractController
         $hand->roll();
 
         $data = [
-            "cardsSuits"=> $hand->getAllValues()
+            "cardsSuits" => $hand->getAllValues()
         ];
 
         $counter = [];
@@ -82,8 +82,8 @@ class CardGameController extends AbstractController
                 }
             }
         }
-        
-        $session->set('remained_cards_num', count($counter)-1);
+
+        $session->set('remained_cards_num', count($counter) - 1);
         // print_r($counter);
         // print_r($data["cardsSuits"]);
 
@@ -95,17 +95,19 @@ class CardGameController extends AbstractController
     {
         $hand = new CardHand();
         $cardGraphic = new CardGraphic();
-        $randomCard= $cardGraphic->randomCard();
+        $randomCard = $cardGraphic->randomCard();
         $cardGraphic->setValue($randomCard);
         $hand->add($cardGraphic);
         print_r($randomCard);
 
-        $data = [
-            "randomCard"=> $hand->getString(),
-            "remainedCardsQuantity"=> $cardGraphic->cardsArrayCount($randomCard)
-        ];
         $sessionRemainedCards = $session->get('remained_cards_num', 0);
-        $session->set('remained_cards_num', $sessionRemainedCards - 1);
+        $sessionFinal = $sessionRemainedCards - 1;
+        $session->set('remained_cards_num', $sessionFinal);
+
+        $data = [
+            "randomCard" => $hand->getString(),
+            "remainedCardsQuantity" => $sessionFinal
+        ];
 
         return $this->render('cards/carddeckdraw.html.twig', $data);
     }
@@ -115,17 +117,19 @@ class CardGameController extends AbstractController
     {
         $hand = new CardHand();
         $cardGraphic = new CardGraphic();
-        $randomCard= $cardGraphic->chosenCards($num);
+        $randomCard = $cardGraphic->chosenCards($num);
         $cardGraphic->setValue($randomCard);
         $hand->add($cardGraphic);
         print_r($randomCard);
 
-        $data = [
-            "randomCard"=> $hand->getValues(),
-            "remainedCardsQuantity"=> $cardGraphic->cardsNumberArrayCount($randomCard)
-        ];
         $sessionRemainedCards = $session->get('remained_cards_num', 0);
-        $session->set('remained_cards_num', $sessionRemainedCards-$num);
+        $sessionFinal = $sessionRemainedCards - $num;
+        $session->set('remained_cards_num', $sessionFinal);
+
+        $data = [
+            "randomCard" => $hand->getValues(),
+            "remainedCardsQuantity" => $sessionFinal
+        ];
         return $this->render('cards/carddeckdrawnum.html.twig', $data);
     }
 }
