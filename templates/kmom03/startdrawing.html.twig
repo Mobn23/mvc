@@ -1,0 +1,11 @@
+{% extends "base3.html.twig" %}
+
+{% block title %}Start Drawing{% endblock %}
+
+{% block main %}
+    <h1>Start Drawing</h1>
+
+    <form action="{{ path('game_card_draw') }}" method="post">
+        <input type="submit" name="draw_card" value="Draw Card">
+    </form>
+{% endblock %}

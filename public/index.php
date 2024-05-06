@@ -21,3 +21,13 @@ return function (array $context) {
 
 // composer run csfix
 // composer run csfix:dry to show the changes without excute them.
+
+// php Mess Detection (phpmd) test at the highest level:
+// tools/phpstan/vendor/bin/phpstan analyse -l 9 src
+// tools/phpstan/vendor/bin/phpstan analyse -c tools/phpstan/phpstan.neon
+
+// Then we merged phpmd tests in composer.json scripts so we can use the downcomming instead.
+// composer validate
+// composer phpmd
+// composer phpstan
+// composer lint

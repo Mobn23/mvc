@@ -4,25 +4,29 @@ namespace App\Cards;
 
 class Card
 {
-    protected $value;
+    protected string $value;
 
     public function __construct()
     {
-        $this->value = null;
+        $this->value = "";
     }
 
+    /** @param string $value */
     public function setValue($value): void
     {
         $this->value = $value;
     }
 
-    public function getValue(): array
+    /** 
+     * @return string
+     */
+    public function getValue(): string
     {
         return $this->value;
     }
 
     public function getAsString(): string
     {
-        return "{$this->value}";
+        return $this->value;
     }
 }

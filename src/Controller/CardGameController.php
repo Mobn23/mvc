@@ -19,6 +19,7 @@ class CardGameController extends AbstractController
     public function sessionLandingPage(SessionInterface $session): Response
     {
         $sessionData = $session->all();
+        dump($sessionData);
         $sessionDataString = json_encode($sessionData);
         return $this->render('cards/session_display.html.twig', [
             'sessionDataString' => $sessionDataString
@@ -83,7 +84,7 @@ class CardGameController extends AbstractController
             }
         }
 
-        $session->set('remained_cards_num', count($counter) - 1);
+        $session->set('remained_cards_num', count($counter) - 2);
         // print_r($counter);
         // print_r($data["cardsSuits"]);
 

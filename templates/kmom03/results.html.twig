@@ -1,0 +1,12 @@
+{% extends "base3.html.twig" %}
+
+{% block title %}Results{% endblock %}
+
+{% block main %}
+    <h1>Results</h1>
+    {{ include('flash.html.twig') }}
+
+    <form action="{{ path('game_init') }}" method="post">
+        <input type="submit" name="play_again" value="Play again">
+    </form>
+{% endblock %}

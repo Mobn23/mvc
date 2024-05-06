@@ -117,7 +117,7 @@ class CardControllerJson extends AbstractController
 
         $data = [
             "randomCard" => $hand->getValues(),
-            "remainedCardsQuantity" => $cardGraphic->cardsNumberArrayCount($randomCard)
+            // "remainedCardsQuantity" => $cardGraphic->cardsNumberArrayCount($randomCard)
         ];
         $sessionRemainedCards = $session->get('remained_cards_num', 0);
         $session->set('remained_cards_num', $sessionRemainedCards - $num);

@@ -1,0 +1,13 @@
+{% extends "base3.html.twig" %}
+
+{% block title %}Random Card{% endblock %}
+
+{% block main %}
+    <h1>Random Card</h1>
+
+    <form action="{{ path('game_card_draw') }}" method="post">
+        <input type="submit" name="draw_card" value="Draw another Card">
+    </form>
+
+    {# {{ remainedCardsQuantity }} #}
+{% endblock %}

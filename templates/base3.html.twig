@@ -21,18 +21,12 @@
 
         <nav>
             <ul>
-                <li><a href="{{ path('me') }}">Me</a></li>
-                <li><a href="{{ path('about') }}">About</a></li>
-                <li><a href="{{ path('lucky') }}">Lucky</a></li>
-                <li><a href="{{ path('report') }}">Report</a></li>
-                <li><a href="{{ path('card') }}">Card</a></li>
-                <li><a href="{{ path('api') }}">Api</a></li>
-                <li><a href="{{ path('game') }}">Game</a></li>
+                <li><a href="{{ path('game_doc') }}">Game Doc</a></li>
             </ul>
         </nav>
 
         <main>
-            {% block body %}{% endblock %}
+            {% block main %}{% endblock %}
         </main>
 
     </body>

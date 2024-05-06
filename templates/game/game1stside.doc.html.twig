@@ -1,0 +1,13 @@
+{% extends "base3.html.twig" %}
+
+{% block title %}kortspelet 21{% endblock %}
+
+{% block main %}
+<h1>kortspelet 21 [START]</h1>
+
+<p> Both the player and the bank can draw cards as long as the total value of their cards is less than or equal to 21, or if they choose to stop. If either the player or the bank's total exceeds 21, they lose. When a player chooses to stop, it's the next player's turn. Eventually, if the bank's total points are equal to or greater than the player's total points, the bank wins.</p>
+<form method="post" action="game/init">
+    <input type="submit" name="do_it" value="Start playing">
+</form>
+
+{% endblock %}

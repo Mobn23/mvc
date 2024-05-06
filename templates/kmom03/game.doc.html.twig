@@ -1,0 +1,32 @@
+{% extends "base3.html.twig" %}
+
+{% block title %}Game Doc{% endblock %}
+
+{% block main %}
+<h1>Game Doc</h1>
+
+<div class="doc-images">
+    <a class="uml" href="{{ asset('img/kmom03-mvc.jpg') }}">
+        <img src="{{ asset('img/kmom03-mvc.jpg') }}" alt="">
+    </a>
+
+    <a class="psuedo" href="{{ asset('img/psuedo-code.png') }}">
+        <img src="{{ asset('img/psuedo-code.png') }}" alt="">
+    </a>
+</div>
+
+<div class="classes">
+    <p> I have implemented four classes: </p>
+    <ol>
+        <li>Card class</li>
+        <p> Handles each card as cards superclass</p>
+        <li>CardGraphic class</li>
+        <p>Handles each card graphically as cards subclass</p>
+        <li>CardHand class</li>
+        <p>Cards holder</p>
+        <li>Game class</li>
+        <p>Handles the Game's processes.</p>
+    </ol>
+</div>
+
+{% endblock %}

@@ -4,78 +4,99 @@ namespace App\Cards;
 
 class CardGraphic extends Card
 {
-    private $representation = [
-        '🃑',
-        '🃒',
-        '🃓',
-        '🃔',
-        '🃕',
-        '🃖',
-        '🃗',
-        '🃘',
-        '🃙',
-        '🃚',
-        '🃛',
-        '🃝',
-        '🃞',
-        '🃟',
-        '🂡',
-        '🂢',
-        '🂣',
-        '🂤',
-        '🂥',
-        '🂦',
-        '🂧',
-        '🂨',
-        '🂩',
-        '🂪',
-        '🂫',
-        '🂭',
-        '🂮',
-        '🂱',
-        '🂲',
-        '🂳',
-        '🂴',
-        '🂵',
-        '🂶',
-        '🂷',
-        '🂸',
-        '🂹',
-        '🂺',
-        '🂻',
-        '🂽',
-        '🂾',
-        '🂿',
-        '🃁',
-        '🃂',
-        '🃃',
-        '🃄',
-        '🃅',
-        '🃆',
-        '🃇',
-        '🃈',
-        '🃉',
-        '🃊',
-        '🃋',
-        '🃍',
-        '🃎',
-        '🃏'
+    /**
+     * @var array<string, string>
+     */
+    private array $representation = [
+        // Spades
+        '🃑' => 'A',
+        '🃒' => '2',
+        '🃓' => '3',
+        '🃔' => '4',
+        '🃕' => '5',
+        '🃖' => '6',
+        '🃗' => '7',
+        '🃘' => '8',
+        '🃙' => '9',
+        '🃚' => '10',
+        '🃛' => 'J',
+        '🃝' => 'Q',
+        '🃞' => 'K',
+        // Hearts
+        '🂡' => 'A',
+        '🂢' => '2',
+        '🂣' => '3',
+        '🂤' => '4',
+        '🂥' => '5',
+        '🂦' => '6',
+        '🂧' => '7',
+        '🂨' => '8',
+        '🂩' => '9',
+        '🂪' => '10',
+        '🂫' => 'J',
+        '🂭' => 'Q',
+        '🂮' => 'K',
+        // Diamonds
+        '🂱' => 'A',
+        '🂲' => '2',
+        '🂳' => '3',
+        '🂴' => '4',
+        '🂵' => '5',
+        '🂶' => '6',
+        '🂷' => '7',
+        '🂸' => '8',
+        '🂹' => '9',
+        '🂺' => '10',
+        '🂻' => 'J',
+        '🂽' => 'Q',
+        '🂾' => 'K',
+        // Clubs
+        '🃁' => 'A',
+        '🃂' => '2',
+        '🃃' => '3',
+        '🃄' => '4',
+        '🃅' => '5',
+        '🃆' => '6',
+        '🃇' => '7',
+        '🃈' => '8',
+        '🃉' => '9',
+        '🃊' => '10',
+        '🃋' => 'J',
+        '🃍' => 'Q',
+        '🃎' => 'K',
     ];
-    private $newArray;
+
+    /**
+     * @var array<string, string>
+     */
+    private array $newArray = [];
 
     public function __construct()
     {
         parent::__construct();
     }
 
+    /**
+     * Gets the representation array.
+     *
+     * @return array<string, string>.
+     */
+    public function getRepresentation(): array
+    {
+        return $this->representation;
+    }
+
+    /**
+     *
+     * @return string
+     */
     public function getAllCardsAsString(): string
     {
-        $card = '';
-        $arrayLength = count($this->representation);
-        for ($i = 0; $i <= $arrayLength - 1; $i++) {
-            $card .= $this->representation[$i];
+        $cardsAsString = '';
+        foreach ($this->representation as $key => $card) {
+            $cardsAsString .= $key;
         }
-        return $card;
+        return $cardsAsString;
     }
 
     public function roll(): void
@@ -83,31 +104,48 @@ class CardGraphic extends Card
         shuffle($this->representation);
     }
 
+    /**
+     * Returns a random card from the representation.
+     *
+     * @return string
+     */
     public function randomCard(): string
     {
-        $this->newArray = $this->representation;
-        $cardsLength = count($this->newArray);
-        $randomIndex = random_int(0, $cardsLength - 1);
-        $randomCard = $this->newArray[$randomIndex];
-        return $randomCard;
+        $keys = array_keys($this->representation);
+        shuffle($keys);
+        $randomKey = $keys[array_rand($keys)];
+        return $randomKey;
     }
 
-    // public function cardsArrayCount($randomCard): string
-    // {
-    //     $key = array_search($randomCard, $this->newArray);
-    //     unset($this->newArray[$key]);
-    //     return count($this->newArray);
-    // }
-
-    public function chosenCards($number): array
+    /**
+     * Returns an array of randomly chosen cards.
+     *
+     * @return int the count of cards.
+     */
+    public function cardsArrayCount(string $randomCard): int
     {
-        $this->newArray = $this->representation;
-        $cardsLength = count($this->newArray);
-        $chosenCards = [];
+        $key = array_search($randomCard, $this->newArray);
+        unset($this->newArray[$key]);
+        return count($this->newArray);
+    }
+
+    /**
+     * Returns an array of randomly chosen cards.
+     *
+     * @param int $number The number of cards to choose.
+     * @return string An array containing randomly chosen cards.
+     */
+    public function chosenCards($number): string
+    {
+        $keys = array_keys($this->representation);
+        $chosenCards = "";
+        shuffle($keys);
+        $randomKey = $keys[array_rand($keys)];
         for($i = 0; $i < $number; $i++) {
-            $randomIndex = random_int(0, $cardsLength - 1);
-            $randomCard = $this->newArray[$randomIndex];
-            $chosenCards[] .= $randomCard;
+            $keys = array_keys($this->representation);
+            shuffle($keys);
+            $randomKey = $keys[array_rand($keys)];
+            $chosenCards .= $randomKey;
         }
         return $chosenCards;
     }

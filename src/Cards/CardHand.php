@@ -6,18 +6,25 @@ use App\Cards\CardGraphic;
 
 class CardHand
 {
-    private $hand = [];
+    /**
+     * @var array<object>
+     */
+    private array $hand = [];
 
     public function add(CardGraphic $cardGraphic): void  //instead of instanciate the die outside we simply inject it as a parameter to the CardHand.add() method.
     {
         $this->hand[] = $cardGraphic;
     }
 
+    /**
+     *
+     * @return array<int<0, max>, object>.
+     */
     public function roll(): array
     {
         $values = [];
         foreach ($this->hand as $card) {
-            $values[] = $card->roll();
+            $values[] = $card;
         }
         return $values;
     }
@@ -27,6 +34,10 @@ class CardHand
         return count($this->hand);
     }
 
+    /**
+     *
+     * @return array<string>.
+     */
     public function getAllValues(): array
     {
         $values = [];
@@ -36,6 +47,10 @@ class CardHand
         return $values;
     }
 
+    /**
+     *
+     * @return array<string>.
+     */
     public function getValues(): array
     {
         $values = [];
@@ -45,6 +60,10 @@ class CardHand
         return $values;
     }
 
+    /**
+     *
+     * @return array<string>.
+     */
     public function getString(): array
     {
         $values = [];

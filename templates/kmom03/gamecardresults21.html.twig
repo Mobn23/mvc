@@ -1,0 +1,32 @@
+{% extends "base3.html.twig" %}
+
+{% block title %}Random Card{% endblock %}
+
+{% block main %}
+    <h1>Random Card</h1>
+    <h2>Player's turn</h2>
+    <ul class="cardarea">
+        {% for suit in randomCard %}
+            {# {% set cards = suit|split('') %} #}
+            {% for card in suit %}
+                {% set codePoint = card|unicode_code_point %}
+                {% if codePoint >= 127153 and codePoint <= 127183 %}
+                    <li><span class="card-red">{{ card }}</span></li><br>
+                {% else %}
+                    <li><span class="card">{{ card }}</span></li><br>
+                {% endif %}
+                {# {{ dump(card) }} #}
+            {% endfor %}
+            {# {{ dump(cards) }} #}
+        {% endfor %}
+    </ul>
+
+    <form action="{{ path('game_card_results') }}" method="post">
+        <input type="submit" name="stop" value="Stop">
+    </form>
+
+    {# {{ remainedCardsQuantity }} #}
+    <p>{{ playerPoints }}</p>
+    {# <p>{{ dump(playerPoints) }}</p> #}
+    {{ include('flash.html.twig') }}
+{% endblock %}
