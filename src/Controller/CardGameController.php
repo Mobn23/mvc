@@ -89,6 +89,7 @@ class CardGameController extends AbstractController
         $data = [
             "cardsSuits" => $hand->getAllValues()
         ];
+
         // print_r($counter);
         // print_r($data["cardsSuits"]);
 
