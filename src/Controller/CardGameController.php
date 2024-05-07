@@ -36,6 +36,22 @@ class CardGameController extends AbstractController
                 'Nu är sessionen raderad!'
             );
         };
+
+        $hand = new CardHand();
+        $card = new CardGraphic();
+        $card->getAllCardsAsString();
+        $hand->add($card);
+        $counter = [];
+        foreach($hand->getAllValues() as $suit) {
+            $cards = str_split($suit);
+            foreach ($cards as $card) {
+                if (!in_array($card, $counter)) {
+                    $counter[] = $card;
+                }
+            }
+        }
+
+        $session->set('remained_cards_num', count($counter) - 2);
         return $this->redirectToRoute('session_display');
     }
 
@@ -73,18 +89,6 @@ class CardGameController extends AbstractController
         $data = [
             "cardsSuits" => $hand->getAllValues()
         ];
-
-        $counter = [];
-        foreach($data["cardsSuits"] as $suit) {
-            $cards = str_split($suit);
-            foreach ($cards as $card) {
-                if (!in_array($card, $counter)) {
-                    $counter[] = $card;
-                }
-            }
-        }
-
-        $session->set('remained_cards_num', count($counter) - 2);
         // print_r($counter);
         // print_r($data["cardsSuits"]);
 

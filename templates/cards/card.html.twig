@@ -10,6 +10,16 @@
     <img src="{{ asset('img/kmom02-mvc.jpg') }}" alt="">
 </a>
 
+<h1>Routes Summary</h1>
+<ul>
+    <li><a href="{{ path('session_display') }}">/session</a> - Session</li>
+    <li><a href="{{ path('session_delete') }}">/session/delete</a> - Session delete </li>
+    <li><a href="{{ path('card_deck') }}">/card/deck</a> - Card deck </li>
+    <li><a href="{{ path('card_deck_shuffle') }}">/card/deck/shuffle</a> - Card deck shuffle</li>
+    <li><a href="{{ path('card_deck_draw') }}">/card/deck/draw</a> - Card deck draw</li>
+    <li><a href="{{ path('card_deck_draw') }}">/card/deck/draw/:number</a> - Card deck draw number</li>
+</ul>
+
 <form method="post" action="card/deck">
     <input type="submit" name="do_it" value="Start playing">
 </form>

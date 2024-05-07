@@ -26,7 +26,7 @@ class CardControllerJson extends AbstractController
         return $this->redirectToRoute('session_display');
     }
 
-    #[Route("/api/deck", name: "api_deck", methods:"GET")]
+    #[Route("/api/deck", name: "api_deck", methods: ["GET", "POST"])]
     public function apiDeck(): Response
     {
         $hand = new CardHand();
@@ -46,7 +46,7 @@ class CardControllerJson extends AbstractController
         return $response;
     }
 
-    #[Route("/api/deck/shuffle", name: "api_deck_shuffle", methods:"POST")]
+    #[Route("/api/deck/shuffle", name: "api_deck_shuffle", methods: ["GET", "POST"])]
     public function apiDeckShuffle(SessionInterface $session): Response
     {
         $this->deleteSession($session);
