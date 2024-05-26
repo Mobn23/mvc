@@ -17,7 +17,7 @@ class Card
         $this->value = $value;
     }
 
-    /** 
+    /**
      * @return string
      */
     public function getValue(): string

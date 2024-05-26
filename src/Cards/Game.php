@@ -42,19 +42,18 @@ class Game
             dump($value);
             if (is_numeric($value)) {
                 $total += $value;
-            } else {
-                switch ($value) {
-                    case 'A':
-                        $total += ($total + 14 <= 21) ? 14 : 1;
-                        break;
-                    case 'J':
-                    case 'Q':
-                    case 'K':
-                        $total += 10;
-                        break;
-                    default:
-                        break;
-                }
+            }
+            switch ($value) {
+                case 'A':
+                    $total += ($total + 14 <= 21) ? 14 : 1;
+                    break;
+                case 'J':
+                case 'Q':
+                case 'K':
+                    $total += 10;
+                    break;
+                default:
+                    break;
             }
         }
         return $total;

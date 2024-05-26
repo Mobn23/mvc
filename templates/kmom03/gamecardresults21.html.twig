@@ -6,7 +6,7 @@
     <h1>Random Card</h1>
     <h2>Player's turn</h2>
     <ul class="cardarea">
-        {% for suit in randomCard %}
+        {% for suit in playerRandomCard %}
             {# {% set cards = suit|split('') %} #}
             {% for card in suit %}
                 {% set codePoint = card|unicode_code_point %}
@@ -22,7 +22,7 @@
     </ul>
 
     <form action="{{ path('game_card_results') }}" method="post">
-        <input type="submit" name="stop" value="Stop">
+        <input type="submit" name="results" value="Results">
     </form>
 
     {# {{ remainedCardsQuantity }} #}

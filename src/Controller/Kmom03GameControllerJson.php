@@ -15,18 +15,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class kmom03GameControllerJson extends AbstractController
+class Kmom03GameControllerJson extends AbstractController
 {
     #[Route("/api/game", name: "api_game")]
     public function apiGame(SessionInterface $session): JsonResponse
     {
-        $game = $session->get('game');
-        if (!$game instanceof Game) {
-            $game = new Game();
-        }
-
         $responseData = [
-            'player_points' => $game->calculateHandValue(),
+            'player_points' => $session->get('sessionPlayerPoints', 0),
             'bank_points' => $session->get('sessionBankPoints', 0),
         ];
 
