@@ -31,4 +31,7 @@ npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
 
-/tools/
+# /tools/
+
+# The things no need to be icluded in git repo
+.phpdoc/

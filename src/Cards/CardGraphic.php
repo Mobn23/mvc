@@ -66,10 +66,10 @@ class CardGraphic extends Card
         '🃎' => 'K',
     ];
 
-    /**
-     * @var array<string, string>
-     */
-    private array $newArray = [];
+    // /**
+    //  * @var array<string, string>
+    //  */
+    // private array $newArray = [];
 
     public function __construct()
     {
@@ -118,15 +118,17 @@ class CardGraphic extends Card
     }
 
     /**
-     * Returns an array of randomly chosen cards.
+     * Returns an the count of representation except the randomly chosen cards.
      *
      * @return int the count of cards.
      */
     public function cardsArrayCount(string $randomCard): int
     {
-        $key = array_search($randomCard, $this->newArray);
-        unset($this->newArray[$key]);
-        return count($this->newArray);
+        if (array_key_exists($randomCard, $this->representation)) {
+            // If the card is found, remove it from the array
+            unset($this->representation[$randomCard]);
+        }
+        return count($this->representation);
     }
 
     /**

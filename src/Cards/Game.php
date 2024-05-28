@@ -7,11 +7,17 @@ use App\Cards\CardGraphic;
 class Game
 {
     /**
+     * This is tha hand array.
      * @var array<array<string>|string>.
      */
     private array $hand = [];
 
-    public function drawCard(): void
+    /**
+     *
+     * This method draws a random card.
+     * @return array<string>.
+     */
+    public function drawCard(): array
     {
         $hand = new CardHand();
         $cardGraphic = new CardGraphic();
@@ -21,10 +27,22 @@ class Game
         $cardString = $hand->getString();
         $this->hand[] = $cardString;
         print_r($randomCard);
+        return $cardString;
     }
 
     /**
      *
+     * This method sets a unicode(string) card to the hand array (used for unittests).
+     * @param array<string> $hand unicode cards array.
+     */
+    public function setHand(array $hand): void
+    {
+        $this->hand = $hand;
+    }
+
+    /**
+     *
+     * This method returns the hand array.
      * @return array<array<string>|string>.
      */
     public function getHandArray(): array
@@ -32,6 +50,11 @@ class Game
         return $this->hand;
     }
 
+    /**
+     *
+     * This method returns the total values of the hand's array cards depending on what the card is.
+     * @return int.
+     */
     public function calculateHandValue(): float|int
     {
         $total = 0;

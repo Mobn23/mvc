@@ -1,0 +1,8 @@
+parameters:
+    level: 7 #Here we controll the level of hardness of composer lint test.
+    paths:
+        - ../../config
+        - ../../src
+        - ../../tests
+    bootstrapFiles:
+        #- .phpstan.constants.php
