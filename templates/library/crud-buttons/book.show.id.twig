@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Book Info{% endblock %}
+
+{% block body %}
+    <div>
+        <h1>Book info: </h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th> Id </th>
+                    <th> Name </th>
+                    <th> Author </th>
+                    <th> Image </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    {# {% dump(book.id) %} #}
+                    <td>{{ book.id }}</td>
+                    <td>{{ book.name }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>
+                        {# Debug the value of book.image #}
+                        {# {% dump(book.image) %} #}
+                        {% if book.image %}
+                            <img src="{{ asset(book.image) }}" alt="{{ book.name }}" width="50">
+                        {% else %}
+                            No Image Provided
+                        {% endif %}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

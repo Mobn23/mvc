@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
             <link rel="icon" href="{{ asset('img/glider.svg') }}">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> {#This is for CRUD buttons colors #}
             <script src="https://kit.fontawesome.com/6c05f714b3.js" crossorigin="anonymous"></script>
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
@@ -28,6 +29,7 @@
                 <li><a href="{{ path('card') }}">Card</a></li>
                 <li><a href="{{ path('api') }}">Api</a></li>
                 <li><a href="{{ path('game_intro') }}">Game</a></li>
+                <li><a href="{{ path('app_library') }}">Library</a></li>
             </ul>
         </nav>
 
