@@ -72,12 +72,13 @@ class LibraryController extends AbstractController
         $id = $request->query->get('bookId');
         $book = $bookRepository
             ->find($id);
+        $baseURL = $request->getBasePath(); // Get the base URL of the application
         $projectDir = $this->getParameter('kernel.project_dir');
         // the images are stored in the 'public/img' directory and named corresponding the books IDs.
         $imagePath = '/img/' . $book->getId() . '.jpg';
 
         if (file_exists($projectDir . '/public' . $imagePath)) {
-            $book->setImage($imagePath);
+            $book->setImage($baseURL . $imagePath);
         }
         $data = [
             'book' => $book,
@@ -88,20 +89,22 @@ class LibraryController extends AbstractController
 
     #[Route('/books/show', name: 'books_show_all')]
     public function showAllBooks(
-        BookRepository $bookRepository
+        BookRepository $bookRepository,
+        Request $request
     ): Response {
         $books = $bookRepository
             ->findAll();
-        $data = ["books" => $books];
+        $baseURL = $request->getBasePath(); // Get the base URL of the application
         foreach ($books as $book) {
             $projectDir = $this->getParameter('kernel.project_dir');
             // the images are stored in the 'public/img' directory and named corresponding the books IDs.
             $imagePath = '/img/' . $book->getId() . '.jpg';
-    
+            
             if (file_exists($projectDir . '/public' . $imagePath)) {
-                $book->setImage($imagePath);
+                $book->setImage($baseURL . $imagePath);
             }
         }
+        $data = ["books" => $books];
         return $this->render('library/index.html.twig', $data);
     }
 
