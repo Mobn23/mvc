@@ -6,6 +6,8 @@ use App\Entity\Book;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
+// Reposotories in ORM handlar service entity (SELECT  queries)
+
 /**
  * @extends ServiceEntityRepository<Book>
  */
