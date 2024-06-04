@@ -6,6 +6,9 @@ use App\Dice\Dice;
 
 class DiceHand
 {
+    /**
+     * @var array<object>
+     */
     private $hand = [];
 
     public function add(Dice $die): void  //instead of instanciate the die outside we simply inject it as a parameter to the DiceHand.add() method.
@@ -13,6 +16,10 @@ class DiceHand
         $this->hand[] = $die;
     }
 
+    /**
+     *
+     * This method rolls the die.
+     */
     public function roll(): void
     {
         foreach ($this->hand as $die) {
@@ -20,11 +27,20 @@ class DiceHand
         }
     }
 
+    /**
+     *
+     * Returns the dices in hand quantity.
+     * @return int.
+     */
     public function getNumberDices(): int
     {
         return count($this->hand);
     }
 
+    /**
+     *
+     * @return array<int>.
+     */
     public function getValues(): array
     {
         $values = [];
@@ -34,6 +50,10 @@ class DiceHand
         return $values;
     }
 
+    /**
+     *
+     * @return int.
+     */
     public function sum(): int
     {
         $sum = 0;
@@ -43,6 +63,10 @@ class DiceHand
         return $sum;
     }
 
+    /**
+     *
+     * @return array<string>.
+     */
     public function getString(): array
     {
         $values = [];

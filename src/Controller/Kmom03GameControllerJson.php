@@ -2,17 +2,10 @@
 
 namespace App\Controller;
 
-use App\Cards\Card;
-use App\Cards\CardGraphic;
-use App\Cards\CardHand;
-use App\Cards\Game;
-use SebastianBergmann\Environment\Console;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class Kmom03GameControllerJson extends AbstractController

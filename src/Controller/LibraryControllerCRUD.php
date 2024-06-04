@@ -11,32 +11,14 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
 
-class LibraryController extends AbstractController
+class LibraryControllerCRUD extends AbstractController
 {
-    #[Route('/library', name: 'app_library')]
-    public function index(): Response //response here is the type of return
-    {
-        return $this->redirectToRoute('books_show_all');
-    }
-
-    #[Route('/create/book/form', name: 'create_book_form')]
-    public function createBookForm(): Response
-    {
-        return $this->render('library/crud-buttons/create.book.form.twig');
-    }
-
-    #[Route('/update/book/form', name: 'update_book_form')]
-    public function updateBookForm(): Response
-    {
-        return $this->render('library/crud-buttons/update.book.form.twig');
-    }
-
-    #[Route('/delete/book/form', name: 'delete_book_form')]
-    public function deleteBookForm(): Response
-    {
-        return $this->render('library/crud-buttons/delete.book.form.twig');
-    }
-
+    /**
+     * Route('/book/create', name: 'book_create', methods:['POST'])
+     * @param ManagerRegistry $doctrine
+     * @param Request $request
+     * @return HTTP Response
+     */
     #[Route('/book/create', name: 'book_create', methods:['POST'])]
     public function createBook(
         ManagerRegistry $doctrine,
@@ -64,6 +46,12 @@ class LibraryController extends AbstractController
         }
     }
 
+    /**
+     * Route('/book/show', name: 'book_show_by_id', methods:['GET', 'POST'])
+     * @param BookRepository $bookRepository
+     * @param Request $request
+     * @return HTTP Response
+     */
     #[Route('/book/show', name: 'book_show_by_id', methods:['GET', 'POST'])]
     public function showBookById(
         BookRepository $bookRepository,
@@ -87,6 +75,12 @@ class LibraryController extends AbstractController
         return $this->render('library/crud-buttons/book.show.id.twig', $data);
     }
 
+    /**
+     * Route('/books/show', name: 'books_show_all')
+     * @param BookRepository $bookRepository
+     * @param Request $request
+     * @return HTTP Response
+     */
     #[Route('/books/show', name: 'books_show_all')]
     public function showAllBooks(
         BookRepository $bookRepository,
@@ -108,6 +102,12 @@ class LibraryController extends AbstractController
         return $this->render('library/index.html.twig', $data);
     }
 
+    /**
+     * Route('/book/update', name: 'book_update', methods:['POST'])
+     * @param ManagerRegistry $doctrine
+     * @param Request $request
+     * @return HTTP Response
+     */
     #[Route('/book/update', name: 'book_update', methods:['POST'])]
     public function updateBook(
         ManagerRegistry $doctrine,
@@ -132,6 +132,12 @@ class LibraryController extends AbstractController
         return $this->redirectToRoute('books_show_all');
     }
 
+    /**
+     * Route('/book/delete', name: 'book_delete')
+     * @param ManagerRegistry $doctrine
+     * @param Request $request
+     * @return HTTP Response
+     */
     #[Route('/book/delete', name: 'book_delete')]
     public function deleteBookById(
         ManagerRegistry $doctrine,

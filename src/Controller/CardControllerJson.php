@@ -13,6 +13,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CardControllerJson extends AbstractController
 {
+    /**
+     * @Route("/session/delete", name: "session_delete")
+     * @param SessionInterface $session
+     * @return Response
+     */
     #[Route("/session/delete", name: "session_delete")]
     public function deleteSession(SessionInterface $session): Response
     {
@@ -26,6 +31,10 @@ class CardControllerJson extends AbstractController
         return $this->redirectToRoute('session_display');
     }
 
+    /**
+     * @Route("/api/deck", name: "api_deck", methods: ["GET", "POST"])
+     * @return Response
+     */
     #[Route("/api/deck", name: "api_deck", methods: ["GET", "POST"])]
     public function apiDeck(): Response
     {
@@ -46,6 +55,10 @@ class CardControllerJson extends AbstractController
         return $response;
     }
 
+    /**
+     * @Route("/api/deck/shuffle", name: "api_deck_shuffle", methods: ["GET", "POST"])
+     * @return Response
+     */
     #[Route("/api/deck/shuffle", name: "api_deck_shuffle", methods: ["GET", "POST"])]
     public function apiDeckShuffle(SessionInterface $session): Response
     {
@@ -80,6 +93,10 @@ class CardControllerJson extends AbstractController
         return $response;
     }
 
+    /**
+     * @Route("api/deck/draw", name: "api_deck_draw", methods: ["GET", "POST"])
+     * @return Response
+     */
     #[Route("api/deck/draw", name: "api_deck_draw", methods: ["GET", "POST"])]
     public function apiDeckDraw(SessionInterface $session): Response
     {
@@ -105,6 +122,10 @@ class CardControllerJson extends AbstractController
         return $response;
     }
 
+    /**
+     * @Route("api/deck/draw/:{num<\d+>}", name: "api_deck_draw_number", methods: ["GET", "POST"])
+     * @return Response
+     */
     #[Route("api/deck/draw/:{num<\d+>}", name: "api_deck_draw_number", methods: ["GET", "POST"])]
     public function apisDeckDraw(int $num, SessionInterface $session): Response
     {
