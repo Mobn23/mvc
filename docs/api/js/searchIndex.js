@@ -196,21 +196,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-CardGameController.html"
         },                {
-            "fqsen": "\\App\\Controller\\CardGameController\u003A\u003AsessionLandingPage\u0028\u0029",
-            "name": "sessionLandingPage",
-            "summary": "",
-            "url": "classes/App-Controller-CardGameController.html#method_sessionLandingPage"
-        },                {
-            "fqsen": "\\App\\Controller\\CardGameController\u003A\u003AdeleteSession\u0028\u0029",
-            "name": "deleteSession",
-            "summary": "",
-            "url": "classes/App-Controller-CardGameController.html#method_deleteSession"
-        },                {
-            "fqsen": "\\App\\Controller\\CardGameController\u003A\u003Acard\u0028\u0029",
-            "name": "card",
-            "summary": "",
-            "url": "classes/App-Controller-CardGameController.html#method_card"
-        },                {
             "fqsen": "\\App\\Controller\\CardGameController\u003A\u003AcardDeck\u0028\u0029",
             "name": "cardDeck",
             "summary": "",
@@ -231,55 +216,80 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-CardGameController.html#method_cardsDeckDraw"
         },                {
+            "fqsen": "\\App\\Controller\\CardGameControllerTwigAndSession",
+            "name": "CardGameControllerTwigAndSession",
+            "summary": "",
+            "url": "classes/App-Controller-CardGameControllerTwigAndSession.html"
+        },                {
+            "fqsen": "\\App\\Controller\\CardGameControllerTwigAndSession\u003A\u003AsessionLandingPage\u0028\u0029",
+            "name": "sessionLandingPage",
+            "summary": "",
+            "url": "classes/App-Controller-CardGameControllerTwigAndSession.html#method_sessionLandingPage"
+        },                {
+            "fqsen": "\\App\\Controller\\CardGameControllerTwigAndSession\u003A\u003AdeleteSession\u0028\u0029",
+            "name": "deleteSession",
+            "summary": "",
+            "url": "classes/App-Controller-CardGameControllerTwigAndSession.html#method_deleteSession"
+        },                {
+            "fqsen": "\\App\\Controller\\CardGameControllerTwigAndSession\u003A\u003Acard\u0028\u0029",
+            "name": "card",
+            "summary": "",
+            "url": "classes/App-Controller-CardGameControllerTwigAndSession.html#method_card"
+        },                {
             "fqsen": "\\App\\Controller\\DiceGameController",
             "name": "DiceGameController",
             "summary": "",
             "url": "classes/App-Controller-DiceGameController.html"
         },                {
-            "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003Ahome\u0028\u0029",
-            "name": "home",
-            "summary": "",
-            "url": "classes/App-Controller-DiceGameController.html#method_home"
-        },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003AtestRollDice\u0028\u0029",
             "name": "testRollDice",
-            "summary": "",
+            "summary": "Route\u0028\u0022\/game\/pig\/test\/roll\u0022,\u0020name\u003A\u0020\u0022test_roll_dice\u0022\u0029",
             "url": "classes/App-Controller-DiceGameController.html#method_testRollDice"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003AtestRollDices\u0028\u0029",
             "name": "testRollDices",
-            "summary": "",
+            "summary": "Route\u0028\u0022\/game\/pig\/test\/roll\/\u007Bnum\u003C\\d\u002B\u003E\u007D\u0022,\u0020name\u003A\u0020\u0022test_roll_num_dices\u0022\u0029",
             "url": "classes/App-Controller-DiceGameController.html#method_testRollDices"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003AtestDiceHand\u0028\u0029",
             "name": "testDiceHand",
-            "summary": "",
+            "summary": "Route\u0028\u0022\/game\/pig\/test\/dicehand\/\u007Bnum\u003C\\d\u002B\u003E\u007D\u0022,\u0020name\u003A\u0020\u0022test_dicehand\u0022\u0029",
             "url": "classes/App-Controller-DiceGameController.html#method_testDiceHand"
-        },                {
-            "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003Ainit\u0028\u0029",
-            "name": "init",
-            "summary": "",
-            "url": "classes/App-Controller-DiceGameController.html#method_init"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003AinitCallback\u0028\u0029",
             "name": "initCallback",
-            "summary": "",
+            "summary": "Route\u0028\u0022\/game\/pig\/init\u0022,\u0020name\u003A\u0020\u0022pig_init_post\u0022,\u0020methods\u003A\u0020\u005B\u0027POST\u0027\u005D\u0029",
             "url": "classes/App-Controller-DiceGameController.html#method_initCallback"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003Aplay\u0028\u0029",
             "name": "play",
-            "summary": "",
+            "summary": "Route\u0028\u0022\/game\/pig\/play\u0022,\u0020name\u003A\u0020\u0022pig_play\u0022,\u0020methods\u003A\u0020\u005B\u0027GET\u0027\u005D\u0029",
             "url": "classes/App-Controller-DiceGameController.html#method_play"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003Aroll\u0028\u0029",
             "name": "roll",
-            "summary": "",
+            "summary": "Route\u0028\u0022\/game\/pig\/roll\u0022,\u0020name\u003A\u0020\u0022pig_roll\u0022,\u0020methods\u003A\u0020\u005B\u0027POST\u0027\u005D\u0029",
             "url": "classes/App-Controller-DiceGameController.html#method_roll"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003Asave\u0028\u0029",
             "name": "save",
-            "summary": "",
+            "summary": "Route\u0028\u0022\/game\/pig\/save\u0022,\u0020name\u003A\u0020\u0022pig_save\u0022,\u0020methods\u003A\u0020\u005B\u0027POST\u0027\u005D\u0029",
             "url": "classes/App-Controller-DiceGameController.html#method_save"
+        },                {
+            "fqsen": "\\App\\Controller\\DiceGameControllerTwig",
+            "name": "DiceGameControllerTwig",
+            "summary": "",
+            "url": "classes/App-Controller-DiceGameControllerTwig.html"
+        },                {
+            "fqsen": "\\App\\Controller\\DiceGameControllerTwig\u003A\u003Ahome\u0028\u0029",
+            "name": "home",
+            "summary": "",
+            "url": "classes/App-Controller-DiceGameControllerTwig.html#method_home"
+        },                {
+            "fqsen": "\\App\\Controller\\DiceGameControllerTwig\u003A\u003Ainit\u0028\u0029",
+            "name": "init",
+            "summary": "",
+            "url": "classes/App-Controller-DiceGameControllerTwig.html#method_init"
         },                {
             "fqsen": "\\App\\Controller\\Kmom03GameControllerJson",
             "name": "Kmom03GameControllerJson",
@@ -296,21 +306,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-KmomThreeGameController.html"
         },                {
-            "fqsen": "\\App\\Controller\\KmomThreeGameController\u003A\u003AgameDoc\u0028\u0029",
-            "name": "gameDoc",
-            "summary": "",
-            "url": "classes/App-Controller-KmomThreeGameController.html#method_gameDoc"
-        },                {
-            "fqsen": "\\App\\Controller\\KmomThreeGameController\u003A\u003Agame\u0028\u0029",
-            "name": "game",
-            "summary": "",
-            "url": "classes/App-Controller-KmomThreeGameController.html#method_game"
-        },                {
-            "fqsen": "\\App\\Controller\\KmomThreeGameController\u003A\u003Ainit\u0028\u0029",
-            "name": "init",
-            "summary": "",
-            "url": "classes/App-Controller-KmomThreeGameController.html#method_init"
-        },                {
             "fqsen": "\\App\\Controller\\KmomThreeGameController\u003A\u003AgameCardDraw\u0028\u0029",
             "name": "gameCardDraw",
             "summary": "",
@@ -321,60 +316,60 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-KmomThreeGameController.html#method_gameCardStop"
         },                {
-            "fqsen": "\\App\\Controller\\KmomThreeGameController\u003A\u003AgameCardSResults\u0028\u0029",
+            "fqsen": "\\App\\Controller\\KmomThreeGameControllerTwig",
+            "name": "KmomThreeGameControllerTwig",
+            "summary": "",
+            "url": "classes/App-Controller-KmomThreeGameControllerTwig.html"
+        },                {
+            "fqsen": "\\App\\Controller\\KmomThreeGameControllerTwig\u003A\u003AgameDoc\u0028\u0029",
+            "name": "gameDoc",
+            "summary": "",
+            "url": "classes/App-Controller-KmomThreeGameControllerTwig.html#method_gameDoc"
+        },                {
+            "fqsen": "\\App\\Controller\\KmomThreeGameControllerTwig\u003A\u003Agame\u0028\u0029",
+            "name": "game",
+            "summary": "",
+            "url": "classes/App-Controller-KmomThreeGameControllerTwig.html#method_game"
+        },                {
+            "fqsen": "\\App\\Controller\\KmomThreeGameControllerTwig\u003A\u003Ainit\u0028\u0029",
+            "name": "init",
+            "summary": "",
+            "url": "classes/App-Controller-KmomThreeGameControllerTwig.html#method_init"
+        },                {
+            "fqsen": "\\App\\Controller\\KmomThreeGameControllerTwig\u003A\u003AgameCardSResults\u0028\u0029",
             "name": "gameCardSResults",
             "summary": "",
-            "url": "classes/App-Controller-KmomThreeGameController.html#method_gameCardSResults"
+            "url": "classes/App-Controller-KmomThreeGameControllerTwig.html#method_gameCardSResults"
         },                {
-            "fqsen": "\\App\\Controller\\LibraryController",
-            "name": "LibraryController",
+            "fqsen": "\\App\\Controller\\LibraryControllerCRUD",
+            "name": "LibraryControllerCRUD",
             "summary": "",
-            "url": "classes/App-Controller-LibraryController.html"
+            "url": "classes/App-Controller-LibraryControllerCRUD.html"
         },                {
-            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003Aindex\u0028\u0029",
-            "name": "index",
-            "summary": "",
-            "url": "classes/App-Controller-LibraryController.html#method_index"
-        },                {
-            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AcreateBookForm\u0028\u0029",
-            "name": "createBookForm",
-            "summary": "",
-            "url": "classes/App-Controller-LibraryController.html#method_createBookForm"
-        },                {
-            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AupdateBookForm\u0028\u0029",
-            "name": "updateBookForm",
-            "summary": "",
-            "url": "classes/App-Controller-LibraryController.html#method_updateBookForm"
-        },                {
-            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AdeleteBookForm\u0028\u0029",
-            "name": "deleteBookForm",
-            "summary": "",
-            "url": "classes/App-Controller-LibraryController.html#method_deleteBookForm"
-        },                {
-            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AcreateBook\u0028\u0029",
+            "fqsen": "\\App\\Controller\\LibraryControllerCRUD\u003A\u003AcreateBook\u0028\u0029",
             "name": "createBook",
-            "summary": "",
-            "url": "classes/App-Controller-LibraryController.html#method_createBook"
+            "summary": "Route\u0028\u0027\/book\/create\u0027,\u0020name\u003A\u0020\u0027book_create\u0027,\u0020methods\u003A\u005B\u0027POST\u0027\u005D\u0029",
+            "url": "classes/App-Controller-LibraryControllerCRUD.html#method_createBook"
         },                {
-            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AshowBookById\u0028\u0029",
+            "fqsen": "\\App\\Controller\\LibraryControllerCRUD\u003A\u003AshowBookById\u0028\u0029",
             "name": "showBookById",
-            "summary": "",
-            "url": "classes/App-Controller-LibraryController.html#method_showBookById"
+            "summary": "Route\u0028\u0027\/book\/show\u0027,\u0020name\u003A\u0020\u0027book_show_by_id\u0027,\u0020methods\u003A\u005B\u0027GET\u0027,\u0020\u0027POST\u0027\u005D\u0029",
+            "url": "classes/App-Controller-LibraryControllerCRUD.html#method_showBookById"
         },                {
-            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AshowAllBooks\u0028\u0029",
+            "fqsen": "\\App\\Controller\\LibraryControllerCRUD\u003A\u003AshowAllBooks\u0028\u0029",
             "name": "showAllBooks",
-            "summary": "",
-            "url": "classes/App-Controller-LibraryController.html#method_showAllBooks"
+            "summary": "Route\u0028\u0027\/books\/show\u0027,\u0020name\u003A\u0020\u0027books_show_all\u0027\u0029",
+            "url": "classes/App-Controller-LibraryControllerCRUD.html#method_showAllBooks"
         },                {
-            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AupdateBook\u0028\u0029",
+            "fqsen": "\\App\\Controller\\LibraryControllerCRUD\u003A\u003AupdateBook\u0028\u0029",
             "name": "updateBook",
-            "summary": "",
-            "url": "classes/App-Controller-LibraryController.html#method_updateBook"
+            "summary": "Route\u0028\u0027\/book\/update\u0027,\u0020name\u003A\u0020\u0027book_update\u0027,\u0020methods\u003A\u005B\u0027POST\u0027\u005D\u0029",
+            "url": "classes/App-Controller-LibraryControllerCRUD.html#method_updateBook"
         },                {
-            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AdeleteBookById\u0028\u0029",
+            "fqsen": "\\App\\Controller\\LibraryControllerCRUD\u003A\u003AdeleteBookById\u0028\u0029",
             "name": "deleteBookById",
-            "summary": "",
-            "url": "classes/App-Controller-LibraryController.html#method_deleteBookById"
+            "summary": "Route\u0028\u0027\/book\/delete\u0027,\u0020name\u003A\u0020\u0027book_delete\u0027\u0029",
+            "url": "classes/App-Controller-LibraryControllerCRUD.html#method_deleteBookById"
         },                {
             "fqsen": "\\App\\Controller\\LibraryControllerJson",
             "name": "LibraryControllerJson",
@@ -390,6 +385,31 @@ Search.appendIndex(
             "name": "showOneBookJson",
             "summary": "",
             "url": "classes/App-Controller-LibraryControllerJson.html#method_showOneBookJson"
+        },                {
+            "fqsen": "\\App\\Controller\\LibraryControllerTwig",
+            "name": "LibraryControllerTwig",
+            "summary": "",
+            "url": "classes/App-Controller-LibraryControllerTwig.html"
+        },                {
+            "fqsen": "\\App\\Controller\\LibraryControllerTwig\u003A\u003Aindex\u0028\u0029",
+            "name": "index",
+            "summary": "",
+            "url": "classes/App-Controller-LibraryControllerTwig.html#method_index"
+        },                {
+            "fqsen": "\\App\\Controller\\LibraryControllerTwig\u003A\u003AcreateBookForm\u0028\u0029",
+            "name": "createBookForm",
+            "summary": "",
+            "url": "classes/App-Controller-LibraryControllerTwig.html#method_createBookForm"
+        },                {
+            "fqsen": "\\App\\Controller\\LibraryControllerTwig\u003A\u003AupdateBookForm\u0028\u0029",
+            "name": "updateBookForm",
+            "summary": "",
+            "url": "classes/App-Controller-LibraryControllerTwig.html#method_updateBookForm"
+        },                {
+            "fqsen": "\\App\\Controller\\LibraryControllerTwig\u003A\u003AdeleteBookForm\u0028\u0029",
+            "name": "deleteBookForm",
+            "summary": "",
+            "url": "classes/App-Controller-LibraryControllerTwig.html#method_deleteBookForm"
         },                {
             "fqsen": "\\App\\Controller\\LuckyController",
             "name": "LuckyController",
@@ -451,55 +471,60 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-LuckyControllerTwig.html#method_game"
         },                {
-            "fqsen": "\\App\\Controller\\ProductController",
-            "name": "ProductController",
+            "fqsen": "\\App\\Controller\\ProductControllerCRUD",
+            "name": "ProductControllerCRUD",
             "summary": "",
-            "url": "classes/App-Controller-ProductController.html"
+            "url": "classes/App-Controller-ProductControllerCRUD.html"
         },                {
-            "fqsen": "\\App\\Controller\\ProductController\u003A\u003Aindex\u0028\u0029",
-            "name": "index",
-            "summary": "",
-            "url": "classes/App-Controller-ProductController.html#method_index"
-        },                {
-            "fqsen": "\\App\\Controller\\ProductController\u003A\u003AcreateProduct\u0028\u0029",
+            "fqsen": "\\App\\Controller\\ProductControllerCRUD\u003A\u003AcreateProduct\u0028\u0029",
             "name": "createProduct",
             "summary": "",
-            "url": "classes/App-Controller-ProductController.html#method_createProduct"
+            "url": "classes/App-Controller-ProductControllerCRUD.html#method_createProduct"
         },                {
-            "fqsen": "\\App\\Controller\\ProductController\u003A\u003AshowAllProduct\u0028\u0029",
+            "fqsen": "\\App\\Controller\\ProductControllerCRUD\u003A\u003AshowAllProduct\u0028\u0029",
             "name": "showAllProduct",
             "summary": "",
-            "url": "classes/App-Controller-ProductController.html#method_showAllProduct"
+            "url": "classes/App-Controller-ProductControllerCRUD.html#method_showAllProduct"
         },                {
-            "fqsen": "\\App\\Controller\\ProductController\u003A\u003AshowProductById\u0028\u0029",
+            "fqsen": "\\App\\Controller\\ProductControllerCRUD\u003A\u003AshowProductById\u0028\u0029",
             "name": "showProductById",
             "summary": "",
-            "url": "classes/App-Controller-ProductController.html#method_showProductById"
+            "url": "classes/App-Controller-ProductControllerCRUD.html#method_showProductById"
         },                {
-            "fqsen": "\\App\\Controller\\ProductController\u003A\u003AdeleteProductById\u0028\u0029",
+            "fqsen": "\\App\\Controller\\ProductControllerCRUD\u003A\u003AdeleteProductById\u0028\u0029",
             "name": "deleteProductById",
             "summary": "",
-            "url": "classes/App-Controller-ProductController.html#method_deleteProductById"
+            "url": "classes/App-Controller-ProductControllerCRUD.html#method_deleteProductById"
         },                {
-            "fqsen": "\\App\\Controller\\ProductController\u003A\u003AupdateProduct\u0028\u0029",
+            "fqsen": "\\App\\Controller\\ProductControllerCRUD\u003A\u003AupdateProduct\u0028\u0029",
             "name": "updateProduct",
             "summary": "",
-            "url": "classes/App-Controller-ProductController.html#method_updateProduct"
+            "url": "classes/App-Controller-ProductControllerCRUD.html#method_updateProduct"
         },                {
-            "fqsen": "\\App\\Controller\\ProductController\u003A\u003AviewAllProduct\u0028\u0029",
+            "fqsen": "\\App\\Controller\\ProductControllerViews",
+            "name": "ProductControllerViews",
+            "summary": "",
+            "url": "classes/App-Controller-ProductControllerViews.html"
+        },                {
+            "fqsen": "\\App\\Controller\\ProductControllerViews\u003A\u003Aindex\u0028\u0029",
+            "name": "index",
+            "summary": "",
+            "url": "classes/App-Controller-ProductControllerViews.html#method_index"
+        },                {
+            "fqsen": "\\App\\Controller\\ProductControllerViews\u003A\u003AviewAllProduct\u0028\u0029",
             "name": "viewAllProduct",
             "summary": "",
-            "url": "classes/App-Controller-ProductController.html#method_viewAllProduct"
+            "url": "classes/App-Controller-ProductControllerViews.html#method_viewAllProduct"
         },                {
-            "fqsen": "\\App\\Controller\\ProductController\u003A\u003AviewProductWithMinimumValue\u0028\u0029",
+            "fqsen": "\\App\\Controller\\ProductControllerViews\u003A\u003AviewProductWithMinimumValue\u0028\u0029",
             "name": "viewProductWithMinimumValue",
             "summary": "",
-            "url": "classes/App-Controller-ProductController.html#method_viewProductWithMinimumValue"
+            "url": "classes/App-Controller-ProductControllerViews.html#method_viewProductWithMinimumValue"
         },                {
-            "fqsen": "\\App\\Controller\\ProductController\u003A\u003AshowProductByMinimumValue\u0028\u0029",
+            "fqsen": "\\App\\Controller\\ProductControllerViews\u003A\u003AshowProductByMinimumValue\u0028\u0029",
             "name": "showProductByMinimumValue",
             "summary": "",
-            "url": "classes/App-Controller-ProductController.html#method_showProductByMinimumValue"
+            "url": "classes/App-Controller-ProductControllerViews.html#method_showProductByMinimumValue"
         },                {
             "fqsen": "\\App\\Dice\\Dice",
             "name": "Dice",
@@ -563,12 +588,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Dice\\DiceHand\u003A\u003Aroll\u0028\u0029",
             "name": "roll",
-            "summary": "",
+            "summary": "This\u0020method\u0020rolls\u0020the\u0020die.",
             "url": "classes/App-Dice-DiceHand.html#method_roll"
         },                {
             "fqsen": "\\App\\Dice\\DiceHand\u003A\u003AgetNumberDices\u0028\u0029",
             "name": "getNumberDices",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020dices\u0020in\u0020hand\u0020quantity.",
             "url": "classes/App-Dice-DiceHand.html#method_getNumberDices"
         },                {
             "fqsen": "\\App\\Dice\\DiceHand\u003A\u003AgetValues\u0028\u0029",
