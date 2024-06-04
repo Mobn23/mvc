@@ -49,7 +49,7 @@
 <div class="page">
     <div class="content content-first">
         <div class="report-details">
-            Created at 2024-06-04 01:09:53        , with PHPMetrics v2.8.2 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
+            Created at 2024-06-04 20:26:08        , with PHPMetrics v2.8.2 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
         </div>
 
         
@@ -313,7 +313,6 @@
             "\\Exception",
             "\\App\\Dice\\DiceHand",
             "\\App\\Dice\\Dice",
-            "\\Symfony\\Component\\HttpFoundation\\Request",
             "\\Symfony\\Component\\HttpFoundation\\Session\\SessionInterface"
         ]
     },
@@ -348,11 +347,6 @@
     },
     {
         "name": "\\App\\Dice\\Dice",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\Symfony\\Component\\HttpFoundation\\Request",
         "size": 3000,
         "relations": []
     },
@@ -471,6 +465,11 @@
         ]
     },
     {
+        "name": "\\Symfony\\Component\\HttpFoundation\\Request",
+        "size": 3000,
+        "relations": []
+    },
+    {
         "name": "\\App\\Controller\\LuckyControllerTwig",
         "size": 3000,
         "relations": [
@@ -520,7 +519,11 @@
         "size": 3000,
         "relations": [
             "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
-            "\\Symfony\\Component\\HttpFoundation\\Response"
+            "\\Symfony\\Component\\HttpFoundation\\Response",
+            "\\Symfony\\Component\\HttpFoundation\\Request",
+            "\\Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
+            "\\App\\Dice\\DiceHand",
+            "\\App\\Dice\\DiceGraphic"
         ]
     },
     {

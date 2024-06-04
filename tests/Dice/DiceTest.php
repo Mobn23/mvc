@@ -38,4 +38,19 @@ class DiceTest extends TestCase
         $exp = 6;
         $this->assertEquals($exp, $res);
     }
+
+    /**
+     * testRoll() checks if the dice's value is greater or less than or equall the assumed value.
+     */
+    public function testRoll()
+    {
+        $dice = new Dice();
+
+        $value = $dice->roll();
+        $this->assertGreaterThanOrEqual(1, $value, 'The rolled value is less than 1.');
+        $this->assertLessThanOrEqual(6, $value, 'The rolled value is greater than 6.');
+
+        $this->assertEquals($value, $dice->getValue(), 'The getValue method did not return the rolled value.');
+    }
+
 }

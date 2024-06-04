@@ -29,6 +29,18 @@ class DiceHand
 
     /**
      *
+     * This method rolls the die/s and return it/them. For unitest.
+     */
+    public function rollReturn(): array
+    {
+        foreach ($this->hand as $die) {
+            $die->roll();
+        }
+        return $this->hand;
+    }
+
+    /**
+     *
      * Returns the dices in hand quantity.
      * @return int.
      */

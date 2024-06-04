@@ -6,7 +6,6 @@ use App\Dice\Dice;
 use App\Dice\DiceGraphic;
 use App\Dice\DiceHand;
 
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -89,34 +88,6 @@ class DiceGameController extends AbstractController
         ];
 
         return $this->render('pig/test/dicehand.html.twig', $data);
-    }
-
-    /**
-     * Route("/game/pig/init", name: "pig_init_post", methods: ['POST'])
-     * @param Request $request
-     * @param SessionInterface $session
-     * @return HTTP Response
-     */
-    #[Route("/game/pig/init", name: "pig_init_post", methods: ['POST'])]
-    public function initCallback(
-        Request $request,
-        SessionInterface $session
-    ): Response {
-        $numDice = $request->request->get('num_dices');
-
-        $hand = new DiceHand();
-        for ($i = 1; $i <= $numDice; $i++) {
-            $hand->add(new DiceGraphic());
-        }
-        $hand->roll();
-
-        $session->set("pig_dicehand", $hand);
-
-        $session->set("pig_dices", $numDice);
-        $session->set("pig_round", 0);
-        $session->set("pig_total", 0);
-
-        return $this->redirectToRoute('pig_play');
     }
 
     /**

@@ -9,6 +9,10 @@ use Twig\TwigFilter;
 
 class AppExtension extends AbstractExtension
 {
+    /**
+     *
+     * This getFilters method.
+     */
     public function getFilters(): array
     {
         return [
@@ -16,6 +20,10 @@ class AppExtension extends AbstractExtension
         ];
     }
 
+    /**
+     *
+     * This getUnicodeCodePoint method.
+     */
     public function getUnicodeCodePoint($char): int
     {
         return mb_ord($char);
