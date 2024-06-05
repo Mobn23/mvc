@@ -8,14 +8,14 @@ class Game
 {
     /**
      * This is tha hand array.
-     * @var array<array<string>|string>.
+     * @var array<array<string>|string>
      */
     private array $hand = [];
 
     /**
      *
      * This method draws a random card.
-     * @return array<string>.
+     * @return array<string>
      */
     public function drawCard(): array
     {
@@ -43,7 +43,7 @@ class Game
     /**
      *
      * This method returns the hand array.
-     * @return array<array<string>|string>.
+     * @return array<array<string>|string>
      */
     public function getHandArray(): array
     {
@@ -53,7 +53,7 @@ class Game
     /**
      *
      * This method returns the total values of the hand's array cards depending on what the card is.
-     * @return int.
+     * @return int
      */
     public function calculateHandValue(): float|int
     {

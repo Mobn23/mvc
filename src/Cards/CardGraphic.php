@@ -93,7 +93,7 @@ class CardGraphic extends Card
     public function getAllCardsAsString(): string
     {
         $cardsAsString = '';
-        foreach ($this->representation as $key => $card) {
+        foreach ($this->representation as $key => $_) {
             $cardsAsString .= $key;
         }
         return $cardsAsString;

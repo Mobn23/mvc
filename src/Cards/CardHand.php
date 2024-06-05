@@ -18,7 +18,7 @@ class CardHand
 
     /**
      *
-     * @return array<int<0, max>, Card>.
+     * @return array<int, Card>
      */
     public function roll(): array
     {

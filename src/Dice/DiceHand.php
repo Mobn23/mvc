@@ -43,7 +43,7 @@ class DiceHand
     /**
      *
      * Returns the dices in hand quantity.
-     * @return int.
+     * @return int
      */
     public function getNumberDices(): int
     {
@@ -52,7 +52,7 @@ class DiceHand
 
     /**
      *
-     * @return array<int>.
+     * @return array<int>
      */
     public function getValues(): array
     {
@@ -65,7 +65,7 @@ class DiceHand
 
     /**
      *
-     * @return int.
+     * @return int
      */
     public function sum(): int
     {
@@ -78,7 +78,7 @@ class DiceHand
 
     /**
      *
-     * @return array<string>.
+     * @return array<string>
      */
     public function getAllValues(): array
     {

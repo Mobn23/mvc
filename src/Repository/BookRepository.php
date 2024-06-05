@@ -23,7 +23,7 @@ class BookRepository extends ServiceEntityRepository
 
     /**
      * Get the max id.
-     * @return int.
+     * @return int
      */
     public function getMaxId(): ?int
     {
