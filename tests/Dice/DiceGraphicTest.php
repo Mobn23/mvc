@@ -12,7 +12,7 @@ class DiceGraphicTest extends TestCase
     /**
      * check if DiceGraphic does not inherit from Dice.
      */
-        public function testInheritance()
+    public function testInheritance(): void
     {
         $diceGraphic = new DiceGraphic();
         $this->assertInstanceOf(Dice::class, $diceGraphic, 'DiceGraphic does not inherit from Dice.');
@@ -21,7 +21,7 @@ class DiceGraphicTest extends TestCase
     /**
      * check if The string representation does match the value.
      */
-    public function testGetAsString()
+    public function testGetAsString(): void
     {
         $diceGraphic = new DiceGraphic();
 

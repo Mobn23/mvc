@@ -2,6 +2,8 @@
 
 namespace App\Cards;
 
+use App\Cards\CardGraphic;
+
 class Card
 {
     protected string $value;
@@ -25,7 +27,19 @@ class Card
         return $this->value;
     }
 
+    /**
+     * @return string.
+     */
     public function getAsString(): string
+    {
+        return $this->value;
+    }
+
+    /**
+     *
+     * @return string
+     */
+    public function getAllCardsAsString(): string
     {
         return $this->value;
     }

@@ -2,17 +2,28 @@
 
 namespace App\Dice;
 
+/**
+ * Class representing a Dice.
+ */
 class Dice
 {
+    /**
+     * @var int|null The current value of the dice.
+     */
     protected $value;
 
+    /**
+     * Dice constructor initializes the dice value to null.
+     */
     public function __construct()
     {
         $this->value = null;
     }
 
     /**
-     * @return int
+     * Rolls the dice and sets its value.
+     *
+     * @return int The value after rolling the dice.
      */
     public function roll(): int
     {
@@ -21,7 +32,9 @@ class Dice
     }
 
     /**
-     * @return ?int
+     * Gets the current value of the dice.
+     *
+     * @return int|null The current value, or null if not rolled yet.
      */
     public function getValue(): ?int
     {
@@ -29,7 +42,9 @@ class Dice
     }
 
     /**
-     * @return string
+     * Gets the string representation of the dice value.
+     *
+     * @return string The string representation of the current value.
      */
     public function getAsString(): string
     {

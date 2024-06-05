@@ -33,7 +33,7 @@ class Game
     /**
      *
      * This method sets a unicode(string) card to the hand array (used for unittests).
-     * @param array<string> $hand unicode cards array.
+     * @param array<array<string>> $hand unicode cards array.
      */
     public function setHand(array $hand): void
     {

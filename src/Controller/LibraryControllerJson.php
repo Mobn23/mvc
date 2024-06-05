@@ -23,7 +23,7 @@ class LibraryControllerJson extends AbstractController
             $projectDir = $this->getParameter('kernel.project_dir');
             // the images are stored in the 'public/img' directory and named corresponding the books IDs.
             $imagePath = '/img/' . $book->getId() . '.jpg';
-    
+
             if (file_exists($projectDir . '/public' . $imagePath)) {
                 $book->setImage($baseURL . $imagePath);
             }
@@ -31,14 +31,14 @@ class LibraryControllerJson extends AbstractController
         return $this->json($books);
     }
 
-    #[Route('/api/library/book/{id}', name: 'api_library_book_id')]
+    #[Route('/api/library/book/{bookId}', name: 'api_library_book_id')]
     public function showOneBookJson(
         BookRepository $bookRepository,
         Request $request,
-        int $id = 1
+        int $bookId = 1
     ): Response {
         $book = $bookRepository
-            ->find($id);
+            ->find($bookId);
 
         $baseURL = $request->getBasePath();
         $projectDir = $this->getParameter('kernel.project_dir');

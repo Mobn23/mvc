@@ -23,8 +23,9 @@ class AppExtension extends AbstractExtension
     /**
      *
      * This getUnicodeCodePoint method.
+     * @param $char string
      */
-    public function getUnicodeCodePoint($char): int
+    public function getUnicodeCodePoint(string $char): int
     {
         return mb_ord($char);
     }

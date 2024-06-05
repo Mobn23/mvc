@@ -7,7 +7,7 @@ use App\Cards\CardGraphic;
 class CardHand
 {
     /**
-     * @var array<object>
+     * @var array<Card>
      */
     private array $hand = [];
 
@@ -18,7 +18,7 @@ class CardHand
 
     /**
      *
-     * @return array<int<0, max>, object>.
+     * @return array<int<0, max>, Card>.
      */
     public function roll(): array
     {

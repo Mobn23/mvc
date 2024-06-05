@@ -42,7 +42,7 @@ class DiceTest extends TestCase
     /**
      * testRoll() checks if the dice's value is greater or less than or equall the assumed value.
      */
-    public function testRoll()
+    public function testRoll(): void
     {
         $dice = new Dice();
 

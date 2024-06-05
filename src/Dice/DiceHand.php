@@ -7,7 +7,7 @@ use App\Dice\Dice;
 class DiceHand
 {
     /**
-     * @var array<object>
+     * @var array<Dice>
      */
     private $hand = [];
 
@@ -30,6 +30,7 @@ class DiceHand
     /**
      *
      * This method rolls the die/s and return it/them. For unitest.
+     * @return array<Dice>
      */
     public function rollReturn(): array
     {
@@ -79,11 +80,13 @@ class DiceHand
      *
      * @return array<string>.
      */
-    public function getString(): array
+    public function getAllValues(): array
     {
         $values = [];
-        foreach ($this->hand as $die) {
-            $values[] = $die->getAsString();
+        if ($this->hand !== null) {
+            foreach ($this->hand as $die) {
+                $values[] = $die->getAsString();
+            }
         }
         return $values;
     }

@@ -2,9 +2,9 @@
 
 namespace App\Controller;
 
-use App\Dice\Dice;
 use App\Dice\DiceGraphic;
 use App\Dice\DiceHand;
+use Exception;
 
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
@@ -16,7 +16,7 @@ class DiceGameController extends AbstractController
 {
     /**
      * Route("/game/pig/test/roll", name: "test_roll_dice")
-     * @return HTTP Response
+     * @return Response
      */
     #[Route("/game/pig/test/roll", name: "test_roll_dice")]
     public function testRollDice(): Response
@@ -34,13 +34,13 @@ class DiceGameController extends AbstractController
     /**
      * Route("/game/pig/test/roll/{num<\d+>}", name: "test_roll_num_dices")
      * @param int $num number of dices will be rolled.
-     * @return HTTP Response
+     * @return Response
      */
     #[Route("/game/pig/test/roll/{num<\d+>}", name: "test_roll_num_dices")]
     public function testRollDices(int $num): Response
     {
         if ($num > 99) {
-            throw new \Exception("Can not roll more than 99 dices!");
+            throw new Exception("Can not roll more than 99 dices!");
         }
 
         $diceRoll = [];
@@ -62,29 +62,25 @@ class DiceGameController extends AbstractController
     /**
      * Route("/game/pig/test/dicehand/{num<\d+>}", name: "test_dicehand")
      * @param int $num number of dices will be displayed.
-     * @return HTTP Response
+     * @return Response
      */
     #[Route("/game/pig/test/dicehand/{num<\d+>}", name: "test_dicehand")]
     public function testDiceHand(int $num): Response
     {
         if ($num > 99) {
-            throw new \Exception("Can not roll more than 99 dices!");
+            throw new Exception("Can not roll more than 99 dices!");
         }
 
         $hand = new DiceHand();
         for ($i = 1; $i <= $num; $i++) {
-            if ($i % 2 === 1) {
-                $hand->add(new DiceGraphic());
-            } else {
-                $hand->add(new Dice());
-            }
+            $hand->add(new DiceGraphic());
         }
 
         $hand->roll();
 
         $data = [
             "num_dices" => $hand->getNumberDices(),
-            "diceRoll" => $hand->getString(),
+            "diceRoll" => $hand->getAllValues(),
         ];
 
         return $this->render('pig/test/dicehand.html.twig', $data);
@@ -93,7 +89,7 @@ class DiceGameController extends AbstractController
     /**
      * Route("/game/pig/play", name: "pig_play", methods: ['GET'])
      * @param SessionInterface $session
-     * @return HTTP Response
+     * @return Response
      */
     #[Route("/game/pig/play", name: "pig_play", methods: ['GET'])]
     public function play(
@@ -114,7 +110,7 @@ class DiceGameController extends AbstractController
     /**
      * Route("/game/pig/roll", name: "pig_roll", methods: ['POST'])
      * @param SessionInterface $session
-     * @return HTTP Response
+     * @return Response
      */
     #[Route("/game/pig/roll", name: "pig_roll", methods: ['POST'])]
     public function roll(
@@ -149,7 +145,7 @@ class DiceGameController extends AbstractController
     /**
      * Route("/game/pig/save", name: "pig_save", methods: ['POST'])
      * @param SessionInterface $session
-     * @return HTTP Response
+     * @return Response
      */
     #[Route("/game/pig/save", name: "pig_save", methods: ['POST'])]
     public function save(
