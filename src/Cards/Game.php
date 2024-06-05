@@ -59,10 +59,10 @@ class Game
     {
         $total = 0;
         foreach ($this->hand as $card) {
-            dump($card);
+            // dump($card);
             $cardGraphic = new CardGraphic();
             $value = $cardGraphic->getRepresentation()[$card[0]];
-            dump($value);
+            // dump($value);
             if (is_numeric($value)) {
                 $total += $value;
             }

@@ -20,37 +20,30 @@ class LibraryControllerCRUD extends AbstractController
      * @param Request $request
      * @return Response
      */
-    #[Route('/book/create', name: 'book_create', methods:['POST'])]
-    public function createBook(
-        ManagerRegistry $doctrine,
-        Request $request,
-    ): Response {
-        if ($request->isMethod('POST')) {
-            $bookName = $request->request->get('bookName');
-            $author = $request->request->get('authorName');
+    #[Route('/book/create', name: 'book_create', methods: ['POST'])]
+    public function createBook(ManagerRegistry $doctrine, Request $request): Response
+    {
+        $bookName = $request->request->get('bookName', '');
+        $author = $request->request->get('authorName', '');
     
-            // Ensure $bookName is a string or null
-            $bookName = is_string($bookName) ? $bookName : null;
+        // Ensure $bookName and $author are strings or default to empty strings
+        $bookName = is_string($bookName) ? $bookName : '';
+        $author = is_string($author) ? $author : '';
     
-            // Ensure $author is a string or null
-            $author = is_string($author) ? $author : null;
+        $entityManager = $doctrine->getManager();
+        $newId = $entityManager->getRepository(Book::class)->getMaxId() + 1;
     
-            $entityManager = $doctrine->getManager();
-            $newId = $entityManager->getRepository(Book::class)->getMaxId() + 1;
+        $book = new Book();
+        $book->setName($bookName);
+        $book->setId($newId);
+        $book->setAuthor($author);
     
-            $book = new Book();
-            $book->setName($bookName);
-            $book->setId($newId);
-            $book->setAuthor($author);
+        $entityManager->persist($book);
+        $entityManager->flush();
     
-            $entityManager->persist($book);
-            $entityManager->flush();
-    
-            return $this->redirectToRoute('books_show_all');
-        }
-    
-        return new Response('Invalid request', Response::HTTP_BAD_REQUEST);
+        return $this->redirectToRoute('books_show_all');
     }
+    
 
     /**
      * Route('/book/show', name: 'book_show_by_id', methods:['GET', 'POST'])
@@ -114,28 +107,20 @@ class LibraryControllerCRUD extends AbstractController
      * @param Request $request
      * @return RedirectResponse
      */
-    #[Route('/book/update', name: 'book_update', methods:['POST'])]
+    #[Route('/book/update', name: 'book_update', methods: ['POST'])]
     public function updateBook(
         ManagerRegistry $doctrine,
-        Request $request,
+        Request $request
     ): Response {
         $bookId = $request->request->get('bookId');
         $bookName = $request->request->get('bookName');
         $authorName = $request->request->get('authorName');
-
-        // Ensure $bookName is a string or null
-        $bookName = is_string($bookName) ? $bookName : null;
-
-        // Ensure $authorName is a string or null
-        $authorName = is_string($authorName) ? $authorName : null;
-
+    
         $entityManager = $doctrine->getManager();
         $book = $entityManager->getRepository(Book::class)->find($bookId);
     
         if (!$book) {
-            throw $this->createNotFoundException(
-                'No book found for id '.$bookId
-            );
+            throw $this->createNotFoundException('No book found for id '.$bookId);
         }
     
         $book->setName($bookName);
@@ -144,6 +129,7 @@ class LibraryControllerCRUD extends AbstractController
     
         return $this->redirectToRoute('books_show_all');
     }
+    
 
     /**
      * Route('/book/delete', name: 'book_delete')

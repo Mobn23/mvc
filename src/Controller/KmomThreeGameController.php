@@ -15,22 +15,13 @@ class KmomThreeGameController extends AbstractController
     #[Route("game/card/draw", name: "game_card_draw", methods: ["POST"])]
     public function gameCardDraw(SessionInterface $session): Response
     {
-        $game = $session->get('game');
-        if (!$game instanceof Game) {
-            $game = new Game();
-        }
+        $game = $session->get('game', new Game());
 
         $game->drawCard();
         $session->set('game', $game);
 
-        // $drawnOnce = $session->get('drawn_once', false);
-        // if (!$drawnOnce) {
         $session->set('drawn_once', true);
         $disableDrawButton = false;
-        // } else {
-        //     $session->set('drawn_once', false);
-        //     $disableDrawButton = true;
-        // }
 
         $playerPoints = $game->calculateHandValue();
         $session->set('sessionPlayerPoints', $playerPoints);
@@ -57,11 +48,9 @@ class KmomThreeGameController extends AbstractController
     #[Route("game/card/stop", name: "game_card_stop", methods: ["POST"])]
     public function gameCardStop(SessionInterface $session): Response
     {
-        $game = $session->get('bank');
-        if (!$game instanceof Game) {
-            $game = new Game();
-        }
+        $game = $session->get('bank', new Game());
         $continueDrawing = true;
+
         while ($continueDrawing) {
             $game->drawCard();
             $session->set('bank', $game);
@@ -84,7 +73,7 @@ class KmomThreeGameController extends AbstractController
             // $disableDrawButton = false;
             // return $this->redirectToRoute('game_card_results');
         }
-        dump($session->all());
+        // dump($session->all());
 
         $bankRandomCard = $game->getHandArray();
         $session->set('sessionRandomCard', $bankRandomCard);
@@ -104,16 +93,3 @@ class KmomThreeGameController extends AbstractController
         return $this->render('game/gamecarddeckdraw.html.twig', $data);
     }
 }
-// $game = $session->get('game', new Game());
-// $playerPoints = $session->get('sessionPlayerPoints', 0);
-// $bankPoints = $session->get('sessionBankPoints', 0);
-// $disableDrawButton = $session->get('disableDrawButton', false);
-
-// $randomCard = $session->get('sessionRandomCard', 0);
-
-// $data = [
-//     'randomCard' => $randomCard,
-//     'playerPoints' => $playerPoints,
-//     'bankPoints' => $bankPoints,
-//     'disableDrawButton' => $disableDrawButton,
-// ];
