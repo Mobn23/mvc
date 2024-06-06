@@ -44,9 +44,14 @@ class CardGraphic extends Card
      */
     public function roll(): void
     {
-        $shuffledRepresentation = $this->cardDeck->shuffle();
-        // Update the representation array in CardGraphic after shuffling
-        $this->cardRepresentation = new CardRepresentation($shuffledRepresentation);
+        $cards = $this->cardRepresentation->getRepresentation();
+        $keys = array_keys($cards);
+        shuffle($keys);
+        $shuffledRepresentation = [];
+        foreach ($keys as $key) {
+            $shuffledRepresentation[$key] = $cards[$key];
+        }
+        $this->cardRepresentation->setRepresentation($shuffledRepresentation);
     }
 
     /**

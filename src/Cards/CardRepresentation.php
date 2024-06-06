@@ -8,7 +8,7 @@ class CardRepresentation
      * @var array<string, string>
      */
     private array $representation = [
-        // Spades
+        // clubs
         '🃑' => 'A',
         '🃒' => '2',
         '🃓' => '3',
@@ -22,7 +22,7 @@ class CardRepresentation
         '🃛' => 'J',
         '🃝' => 'Q',
         '🃞' => 'K',
-        // Hearts
+        // Spades
         '🂡' => 'A',
         '🂢' => '2',
         '🂣' => '3',
@@ -36,7 +36,7 @@ class CardRepresentation
         '🂫' => 'J',
         '🂭' => 'Q',
         '🂮' => 'K',
-        // Diamonds
+        // Hearts
         '🂱' => 'A',
         '🂲' => '2',
         '🂳' => '3',
@@ -50,7 +50,7 @@ class CardRepresentation
         '🂻' => 'J',
         '🂽' => 'Q',
         '🂾' => 'K',
-        // Clubs
+        // Diamonds
         '🃁' => 'A',
         '🃂' => '2',
         '🃃' => '3',
@@ -77,6 +77,14 @@ class CardRepresentation
     }
 
     /**
+     * Sets the representation array.
+     */
+    public function setRepresentation(array $representation): void
+    {
+        $this->representation = $representation;
+    }
+
+    /**
      * Returns all cards as a string.
      *
      * @return string
@@ -84,5 +92,16 @@ class CardRepresentation
     public function getAllCardsAsString(): string
     {
         return implode('', array_keys($this->representation));
+    }
+
+    /**
+     * Returns the rank of a card given its symbol. For clarifying the code.
+     *
+     * @param string $symbol The symbol of the card.
+     * @return string|null The rank of the card.
+     */
+    public function getRank(string $symbol): ?string
+    {
+        return $this->representation[$symbol] ?? null;
     }
 }

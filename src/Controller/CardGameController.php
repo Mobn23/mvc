@@ -43,16 +43,12 @@ class CardGameController extends AbstractController
         $session->clear();
         $hand = new CardHand();
         $card = new CardGraphic();
-        $card->getAllCardsAsString();
+        $card->roll();
         $hand->add($card);
-        $hand->roll();
 
         $data = [
             "cardsSuits" => $hand->getAllValues()
         ];
-
-        // print_r($counter);
-        // print_r($data["cardsSuits"]);
 
         return $this->render('cards/test/carddeck.html.twig', $data);
     }

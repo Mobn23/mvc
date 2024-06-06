@@ -18,15 +18,11 @@ class CardHand
 
     /**
      *
-     * @return array<int, Card>
+     * Roll Hand method.
      */
-    public function roll(): array
+    public function roll(): void
     {
-        $values = [];
-        foreach ($this->hand as $card) {
-            $values[] = $card;
-        }
-        return $values;
+        shuffle($this->hand);
     }
 
     public function getNumberCards(): int
