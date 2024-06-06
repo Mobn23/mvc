@@ -14,11 +14,11 @@ class CardDeck
     /**
      * Shuffles the card representation.
      */
-    public function shuffle(): void
+    public function shuffle(): array
     {
         $representation = $this->cardRepresentation->getRepresentation();
         shuffle($representation);
-        $this->cardRepresentation = new CardRepresentation($representation);
+        return $representation;
     }
 
     /**

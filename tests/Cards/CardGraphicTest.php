@@ -33,8 +33,7 @@ class CardGraphicTest extends TestCase
     {
         $cardGraphic = new CardGraphic();
         $res = $cardGraphic->getRepresentation();
-        $cardGraphic->roll();
-        $res2 = $cardGraphic->getRepresentation();
+        $res2 =$cardGraphic->roll();
         $this->assertNotEquals($res, $res2);
     }
 

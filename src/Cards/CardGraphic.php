@@ -25,7 +25,8 @@ class CardGraphic extends Card
     public function __construct()
     {
         parent::__construct();
-        $this->cardDeck = new CardDeck(new CardRepresentation());
+        $this->cardRepresentation = new CardRepresentation();
+        $this->cardDeck = new CardDeck($this->cardRepresentation);
     }
 
     /**
@@ -35,7 +36,6 @@ class CardGraphic extends Card
      */
     public function getAllCardsAsString(): string
     {
-        $this->cardRepresentation = new CardRepresentation();
         return $this->cardRepresentation->getAllCardsAsString();
     }
 
@@ -44,7 +44,9 @@ class CardGraphic extends Card
      */
     public function roll(): void
     {
-        $this->cardDeck->shuffle();
+        $shuffledRepresentation = $this->cardDeck->shuffle();
+        // Update the representation array in CardGraphic after shuffling
+        $this->cardRepresentation = new CardRepresentation($shuffledRepresentation);
     }
 
     /**
@@ -77,5 +79,15 @@ class CardGraphic extends Card
     public function chosenCards(int $number): string
     {
         return $this->cardDeck->chosenCards($number);
+    }
+
+    /**
+     * Gets the representation array.
+     *
+     * @return array<string, string>
+     */
+    public function getRepresentation(): array
+    {
+        return $this->cardRepresentation->getRepresentation();
     }
 }
