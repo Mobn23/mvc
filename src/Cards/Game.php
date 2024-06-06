@@ -3,6 +3,7 @@
 namespace App\Cards;
 
 use App\Cards\CardGraphic;
+use App\Cards\CardRepresentation;
 
 class Game
 {
@@ -60,8 +61,8 @@ class Game
         $total = 0;
         foreach ($this->hand as $card) {
             // dump($card);
-            $cardGraphic = new CardGraphic();
-            $value = $cardGraphic->getRepresentation()[$card[0]];
+            $cardRepresentation = new CardRepresentation();
+            $value = $cardRepresentation->getRepresentation()[$card[0]];
             // dump($value);
             if (is_numeric($value)) {
                 $total += $value;

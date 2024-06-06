@@ -1,0 +1,39 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Metrics{% endblock %}
+
+{% block body %}
+
+    <h1>Clean code</h1>
+    <ul>
+        <li><a href="#introduktion">Introduktion</a></li>
+        <li><a href="#phpmetrics">Phpmetrics</a></li>
+        <li><a href="#scrutinizer">Scrutinizer</a></li>
+        <li><a href="#förbättringar">Förbättringar</a></li>
+        <li><a href="#diskussion">Diskussion</a></li>
+    </ul>
+
+    <h2 id="introduktion">Introduktion</h2>
+    <h5>De sex C:na är sex princepler som man kan följa för att förbättra och en ren kod. De är:</h5>
+    <ul>
+        <li>Cohesion</li>
+        <li>Code Style</li>
+        <li>Coverage</li>
+        <li>Coupling</li>
+        <li>Complexity</li>
+        <li>Crap</li>
+    </ul>
+    <p>This is the report text for Kmom06.</p>
+    <h2 id="phpmetrics">Phpmetrics</h2>
+    <p>This is the report text for Kmom07.</p>
+    <h2 id="scrutinizer">Scrutinizer</h2>
+    <p>This is the report text for Kmom10.</p>
+    <h2 id="förbättringar">Förbättringar</h2>
+    <p>This is the report text for Kmom06.</p>
+    <h2 id="diskussion">Diskussion</h2>
+    <p>This is the report text for Kmom07.</p>
+
+    {% endblock %}
+
+{# To push to github:
+git init => git add . => git tag -m"message" => git commit -m "message" => git push origin --tags => git push origin main (main is the branch name) #}
