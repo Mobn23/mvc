@@ -35,13 +35,13 @@ class KmomThreeGameControllerTwig extends AbstractController
         $playerPoints = $session->get('sessionPlayerPoints');
         $bankPoints = $session->get('sessionBankPoints');
 
-        if ($bankPoints >= $playerPoints && $bankPoints <= 21 || $playerPoints > 21) {
+        if (($bankPoints >= $playerPoints && $bankPoints <= 21) || $playerPoints > 21) {
             $this->addFlash(
                 'warning',
                 'The Bank won!'
             );
         } elseif($bankPoints < $playerPoints || $bankPoints > 21) {
-            dump('bankPoints: ' . $bankPoints);
+            // dump('bankPoints: ' . $bankPoints);
             $this->addFlash(
                 'warning',
                 'The Player won!'

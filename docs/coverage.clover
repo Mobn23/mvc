@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1717705549">
-  <project timestamp="1717705549">
+<coverage generated="1717772086">
+  <project timestamp="1717772086">
     <file name="/home/mobn/dbwebb-kurser/mvc/me/report/src/AppExtension.php">
       <class name="App\AppExtension" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
@@ -451,7 +451,7 @@
     </file>
     <file name="/home/mobn/dbwebb-kurser/mvc/me/report/src/Controller/KmomThreeGameController.php">
       <class name="App\Controller\KmomThreeGameController" namespace="global">
-        <metrics complexity="7" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="49" coveredstatements="0" elements="51" coveredelements="0"/>
+        <metrics complexity="7" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="51" coveredstatements="0" elements="53" coveredelements="0"/>
       </class>
       <line num="15" type="method" name="gameCardDraw" visibility="public" complexity="2" crap="6" count="0"/>
       <line num="18" type="stmt" count="0"/>
@@ -481,16 +481,16 @@
       <line num="54" type="stmt" count="0"/>
       <line num="55" type="stmt" count="0"/>
       <line num="56" type="stmt" count="0"/>
+      <line num="57" type="stmt" count="0"/>
       <line num="58" type="stmt" count="0"/>
-      <line num="59" type="stmt" count="0"/>
+      <line num="60" type="stmt" count="0"/>
       <line num="61" type="stmt" count="0"/>
-      <line num="62" type="stmt" count="0"/>
-      <line num="66" type="stmt" count="0"/>
-      <line num="67" type="stmt" count="0"/>
+      <line num="63" type="stmt" count="0"/>
+      <line num="64" type="stmt" count="0"/>
+      <line num="68" type="stmt" count="0"/>
       <line num="69" type="stmt" count="0"/>
-      <line num="72" type="stmt" count="0"/>
-      <line num="78" type="stmt" count="0"/>
-      <line num="79" type="stmt" count="0"/>
+      <line num="71" type="stmt" count="0"/>
+      <line num="74" type="stmt" count="0"/>
       <line num="80" type="stmt" count="0"/>
       <line num="81" type="stmt" count="0"/>
       <line num="82" type="stmt" count="0"/>
@@ -503,12 +503,14 @@
       <line num="89" type="stmt" count="0"/>
       <line num="90" type="stmt" count="0"/>
       <line num="91" type="stmt" count="0"/>
+      <line num="92" type="stmt" count="0"/>
       <line num="93" type="stmt" count="0"/>
-      <metrics loc="96" ncloc="90" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="49" coveredstatements="0" elements="51" coveredelements="0"/>
+      <line num="95" type="stmt" count="0"/>
+      <metrics loc="98" ncloc="92" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="51" coveredstatements="0" elements="53" coveredelements="0"/>
     </file>
     <file name="/home/mobn/dbwebb-kurser/mvc/me/report/src/Controller/KmomThreeGameControllerTwig.php">
       <class name="App\Controller\KmomThreeGameControllerTwig" namespace="global">
-        <metrics complexity="9" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="0" elements="22" coveredelements="0"/>
+        <metrics complexity="9" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="0" elements="21" coveredelements="0"/>
       </class>
       <line num="13" type="method" name="gameDoc" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="16" type="stmt" count="0"/>
@@ -526,13 +528,12 @@
       <line num="41" type="stmt" count="0"/>
       <line num="42" type="stmt" count="0"/>
       <line num="43" type="stmt" count="0"/>
-      <line num="44" type="stmt" count="0"/>
       <line num="45" type="stmt" count="0"/>
       <line num="46" type="stmt" count="0"/>
       <line num="47" type="stmt" count="0"/>
       <line num="48" type="stmt" count="0"/>
       <line num="50" type="stmt" count="0"/>
-      <metrics loc="53" ncloc="53" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="0" elements="22" coveredelements="0"/>
+      <metrics loc="53" ncloc="52" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="0" elements="21" coveredelements="0"/>
     </file>
     <file name="/home/mobn/dbwebb-kurser/mvc/me/report/src/Controller/LibraryControllerCRUD.php">
       <class name="App\Controller\LibraryControllerCRUD" namespace="global">
@@ -845,45 +846,45 @@
       <class name="App\Entity\Book" namespace="global">
         <metrics complexity="8" methods="8" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="20" coveredelements="0"/>
       </class>
-      <line num="25" type="method" name="getId" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="27" type="stmt" count="0"/>
-      <line num="30" type="method" name="setId" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="32" type="stmt" count="0"/>
-      <line num="33" type="stmt" count="0"/>
-      <line num="36" type="method" name="getName" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="38" type="stmt" count="0"/>
-      <line num="41" type="method" name="setName" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="43" type="stmt" count="0"/>
-      <line num="45" type="stmt" count="0"/>
-      <line num="48" type="method" name="getAuthor" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="50" type="stmt" count="0"/>
-      <line num="53" type="method" name="setAuthor" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="55" type="stmt" count="0"/>
-      <line num="57" type="stmt" count="0"/>
-      <line num="60" type="method" name="getImage" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="62" type="stmt" count="0"/>
-      <line num="65" type="method" name="setImage" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="67" type="stmt" count="0"/>
-      <line num="69" type="stmt" count="0"/>
-      <metrics loc="72" ncloc="71" classes="1" methods="8" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="20" coveredelements="0"/>
+      <line num="58" type="method" name="getId" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="60" type="stmt" count="0"/>
+      <line num="69" type="method" name="setId" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="71" type="stmt" count="0"/>
+      <line num="72" type="stmt" count="0"/>
+      <line num="80" type="method" name="getName" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="82" type="stmt" count="0"/>
+      <line num="91" type="method" name="setName" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="93" type="stmt" count="0"/>
+      <line num="95" type="stmt" count="0"/>
+      <line num="103" type="method" name="getAuthor" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="105" type="stmt" count="0"/>
+      <line num="114" type="method" name="setAuthor" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="116" type="stmt" count="0"/>
+      <line num="118" type="stmt" count="0"/>
+      <line num="126" type="method" name="getImage" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="128" type="stmt" count="0"/>
+      <line num="137" type="method" name="setImage" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="139" type="stmt" count="0"/>
+      <line num="141" type="stmt" count="0"/>
+      <metrics loc="144" ncloc="72" classes="1" methods="8" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="20" coveredelements="0"/>
     </file>
     <file name="/home/mobn/dbwebb-kurser/mvc/me/report/src/Entity/Product.php">
       <class name="App\Entity\Product" namespace="global">
         <metrics complexity="5" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="12" coveredelements="0"/>
       </class>
-      <line num="22" type="method" name="getId" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="24" type="stmt" count="0"/>
-      <line num="27" type="method" name="getName" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="29" type="stmt" count="0"/>
-      <line num="32" type="method" name="setName" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="34" type="stmt" count="0"/>
-      <line num="36" type="stmt" count="0"/>
-      <line num="39" type="method" name="getValue" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="41" type="stmt" count="0"/>
-      <line num="44" type="method" name="setValue" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="46" type="stmt" count="0"/>
-      <line num="48" type="stmt" count="0"/>
-      <metrics loc="51" ncloc="51" classes="1" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="12" coveredelements="0"/>
+      <line num="50" type="method" name="getId" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="52" type="stmt" count="0"/>
+      <line num="60" type="method" name="getName" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="62" type="stmt" count="0"/>
+      <line num="71" type="method" name="setName" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="73" type="stmt" count="0"/>
+      <line num="75" type="stmt" count="0"/>
+      <line num="83" type="method" name="getValue" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="85" type="stmt" count="0"/>
+      <line num="94" type="method" name="setValue" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="96" type="stmt" count="0"/>
+      <line num="98" type="stmt" count="0"/>
+      <metrics loc="101" ncloc="51" classes="1" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="12" coveredelements="0"/>
     </file>
     <file name="/home/mobn/dbwebb-kurser/mvc/me/report/src/Kernel.php">
       <class name="App\Kernel" namespace="global">
@@ -927,6 +928,6 @@
       <line num="52" type="stmt" count="0"/>
       <metrics loc="80" ncloc="44" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="16" coveredelements="0"/>
     </file>
-    <metrics files="32" loc="2330" ncloc="1839" classes="31" methods="122" coveredmethods="41" conditionals="0" coveredconditionals="0" statements="612" coveredstatements="102" elements="734" coveredelements="143"/>
+    <metrics files="32" loc="2454" ncloc="1841" classes="31" methods="122" coveredmethods="41" conditionals="0" coveredconditionals="0" statements="613" coveredstatements="102" elements="735" coveredelements="143"/>
   </project>
 </coverage>

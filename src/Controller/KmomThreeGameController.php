@@ -51,6 +51,8 @@ class KmomThreeGameController extends AbstractController
         $game = $session->get('bank', new Game());
         $continueDrawing = true;
 
+        $bankPoints = 0;
+        $sessionPlayerPoints = $session->get('sessionPlayerPoints', 0);
         while ($continueDrawing) {
             $game->drawCard();
             $session->set('bank', $game);

@@ -17,14 +17,28 @@
     <h5>De sex C:na är sex princepler som man kan följa för att förbättra och en ren kod. De är:</h5>
     <ul>
         <li>Cohesion:</li>
-        <p>Det </p>
-        <li>Code Style</li>
-        <li>Coverage</li>
-        <li>Coupling</li>
-        <li>Complexity</li>
-        <li>Crap</li>
+        <p>Det är till exempel att en klass har hög cohesion och kan hantera sin egen funktionalitet perfekt. En klass med hög cohesion är ansvarig för en enda uppgift eller en nära relaterad uppsättning uppgifter, vilket gör den lättare att förstå och underhålla.</p>
+
+        <li>Code Style:</li>
+        <p>Det är viktigt att följa PHP-standarder när man skriver kod, till exempel metodnamn, klassnamn och placering av klamrar. En konsekvent kodstil förbättrar läsbarheten och underhållbarheten av koden.</p>
+
+        <li>Coverage:</li>
+        <p>Det handlar om enhetstester och att mäta hur stor procentandel av koden som testas. Hög täckning innebär att en stor del av koden exekveras under testning, vilket kan indikera att koden är vältestad.</p>
+        <p>Enligt min kod så har jag 20% Coverage PHP Unit Test.Därtill har jag 78.13 % classes never called by tests inom PHPmetrics verktyg.</p>
+
+        <li>Coupling:</li>
+        <p>Det handlar om hur mycket en klass eller modul känner till en annan klass eller modul. Lägre coupling innebär att klasser eller moduler är mer oberoende, vilket förbättrar underhållbarhet och återanvändbarhet.</p>
+        <p>Inom Scrutinizer så finns det två typer till Coupling:</p>
+        <p>Afferent coupling (bring it in)vilket är när en viss class användas inom många andra classer eller controllers(Modul) så är det inom min kod den mest är CardGraphic 5, CardHand 4, CardRepresentation 3 ... och med mera </p>
+        <p>Efferent coupling (bring it out) vilket är när en viss class eller controller (Modul) använder eller beror på andrä classer t.ex inom min kod CardControllerJson beroende på 7 andra classer, DiceGameController på 6, och med mera.</p>
+
+        <li>Complexity:</li>
+        <p>Det handlar om hur komplicerad koden är, till exempel genom att använda många if-satser, else-satser, etc. Hög komplexitet gör koden svårare att förstå och underhålla, medan lägre komplexitet innebär mer lättläst och enklare kod.</p>
+        <p>Så enligt PHPMetrics på min kod så har jag 2.81 som <b>Average cyclomatic complexity by class</b> och enligt modular har LibraryControllerCRUD den mest komplixitet som är 361.35 .</p>
+
+        <li>CRAP (Change Risk Anti-Patterns):</li>
+        <p>Det är ett mått som kombinerar kodens komplexitet och dess testtäckning. Hög CRAP-poäng indikerar kod som är både komplex och dåligt testad, vilket ökar risken för fel och gör koden svårare att underhålla.</p>
     </ul>
-    <p>This is the report text for Kmom06.</p>
     <h2 id="phpmetrics">Phpmetrics</h2>
     <p>This is the report text for Kmom07.</p>
     <h2 id="scrutinizer">Scrutinizer</h2>
