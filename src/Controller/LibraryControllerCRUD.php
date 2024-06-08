@@ -25,25 +25,25 @@ class LibraryControllerCRUD extends AbstractController
     {
         $bookName = $request->request->get('bookName', '');
         $author = $request->request->get('authorName', '');
-    
+
         // Ensure $bookName and $author are strings or default to empty strings
         $bookName = is_string($bookName) ? $bookName : '';
         $author = is_string($author) ? $author : '';
-    
+
         $entityManager = $doctrine->getManager();
         $newId = $entityManager->getRepository(Book::class)->getMaxId() + 1;
-    
+
         $book = new Book();
         $book->setName($bookName);
         $book->setId($newId);
         $book->setAuthor($author);
-    
+
         $entityManager->persist($book);
         $entityManager->flush();
-    
+
         return $this->redirectToRoute('books_show_all');
     }
-    
+
 
     /**
      * Route('/book/show', name: 'book_show_by_id', methods:['GET', 'POST'])
@@ -115,21 +115,21 @@ class LibraryControllerCRUD extends AbstractController
         $bookId = $request->request->get('bookId');
         $bookName = $request->request->get('bookName');
         $authorName = $request->request->get('authorName');
-    
+
         $entityManager = $doctrine->getManager();
         $book = $entityManager->getRepository(Book::class)->find($bookId);
-    
+
         if (!$book) {
             throw $this->createNotFoundException('No book found for id '.$bookId);
         }
-    
+
         $book->setName($bookName);
         $book->setAuthor($authorName);
         $entityManager->flush();
-    
+
         return $this->redirectToRoute('books_show_all');
     }
-    
+
 
     /**
      * Route('/book/delete', name: 'book_delete')

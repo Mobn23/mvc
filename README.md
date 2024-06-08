@@ -1972,3 +1972,9 @@ You might also find it useful to read up a bit more on Twig.
 Exercise create a form (min, max) that posts to a route generating a random number between min and max.
 -->
 # mvc
+
+# Scrutinizer my code 
+[![Build Status](https://scrutinizer-ci.com/g/Mobn23/mvc/badges/build.png?b=main)](https://scrutinizer-ci.com/g/Mobn23/mvc/build-status/main)
+[![Coverage](https://scrutinizer-ci.com/g/Mobn23/mvc/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/Mobn23/mvc/code-structure/main/code-coverage)
+[![Quality](https://scrutinizer-ci.com/g/Mobn23/mvc/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/Mobn23/mvc/?branch=main)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/Mobn23/mvc/badges/code-intelligence.svg?b=main)](https://scrutinizer-ci.com/g/Mobn23/mvc/inspections/main)

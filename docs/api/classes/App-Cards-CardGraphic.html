@@ -89,6 +89,16 @@
     <a href="packages/Application.html" class="">Application</a>
 </h4>
 
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/App.html" class="">App</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="packages/App-Entity.html" class="">Entity</a>
+                
+            </li>
+            </ul>
+
                         </section>
             
     <section class="phpdocumentor-sidebar__category -reports">
@@ -137,11 +147,14 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Cards/CardGraphic.php"><a href="files/src-cards-cardgraphic.html"><abbr title="src/Cards/CardGraphic.php">CardGraphic.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5</span>
+    <span class="phpdocumentor-element-found-in__line">10</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Class CardGraphic</p>
+
+    <section class="phpdocumentor-description"><p>Represents a graphical card that extends the basic card functionality.</p>
+</section>
 
 
 
@@ -176,9 +189,15 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/App-Cards-CardGraphic.html#property_representation">$representation</a>
+    <a href="classes/App-Cards-CardGraphic.html#property_cardDeck">$cardDeck</a>
     <span>
-                        &nbsp;: array&lt;string, string&gt;            </span>
+                        &nbsp;: <a href="classes/App-Cards-CardDeck.html"><abbr title="\App\Cards\CardDeck">CardDeck</abbr></a>            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/App-Cards-CardGraphic.html#property_cardRepresentation">$cardRepresentation</a>
+    <span>
+                        &nbsp;: <a href="classes/App-Cards-CardRepresentation.html"><abbr title="\App\Cards\CardRepresentation">CardRepresentation</abbr></a>            </span>
 </dt>
 
     </dl>
@@ -194,26 +213,28 @@
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
+<dd>CardGraphic constructor.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Cards-CardGraphic.html#method_cardsArrayCount">cardsArrayCount()</a>
     <span>
                                 &nbsp;: int    </span>
 </dt>
-<dd>Returns an the count of representation except the randomly chosen cards.</dd>
+<dd>Returns the count of cards in the deck excluding a specified card.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Cards-CardGraphic.html#method_chosenCards">chosenCards()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
-<dd>Returns an array of randomly chosen cards.</dd>
+<dd>Returns a string containing a specified number of randomly chosen cards.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Cards-CardGraphic.html#method_getAllCardsAsString">getAllCardsAsString()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
+<dd>Gets all cards as a single string.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Cards-Card.html#method_getAsString">getAsString()</a>
@@ -224,7 +245,7 @@
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Cards-CardGraphic.html#method_getRepresentation">getRepresentation()</a>
     <span>
-                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+                                &nbsp;: array&lt;string, string&gt;    </span>
 </dt>
 <dd>Gets the representation array.</dd>
 
@@ -239,13 +260,14 @@
     <span>
                                 &nbsp;: string    </span>
 </dt>
-<dd>Returns a random card from the representation.</dd>
+<dd>Returns a random card from the deck.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Cards-CardGraphic.html#method_roll">roll()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
+<dd>Shuffles the deck of cards.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Cards-Card.html#method_setValue">setValue()</a>
@@ -308,9 +330,9 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_representation">
-        $representation
-        <a href="classes/App-Cards-CardGraphic.html#property_representation" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_cardDeck">
+        $cardDeck
+        <a href="classes/App-Cards-CardGraphic.html#property_cardDeck" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
@@ -318,73 +340,51 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Cards/CardGraphic.php"><a href="files/src-cards-cardgraphic.html"><abbr title="src/Cards/CardGraphic.php">CardGraphic.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">10</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">array&lt;string, string&gt;</span>
-    <span class="phpdocumentor-signature__name">$representation</span>
-     = <span class="phpdocumentor-signature__default-value">[
-    // Spades
-    &#039;🃑&#039; =&gt; &#039;A&#039;,
-    &#039;🃒&#039; =&gt; &#039;2&#039;,
-    &#039;🃓&#039; =&gt; &#039;3&#039;,
-    &#039;🃔&#039; =&gt; &#039;4&#039;,
-    &#039;🃕&#039; =&gt; &#039;5&#039;,
-    &#039;🃖&#039; =&gt; &#039;6&#039;,
-    &#039;🃗&#039; =&gt; &#039;7&#039;,
-    &#039;🃘&#039; =&gt; &#039;8&#039;,
-    &#039;🃙&#039; =&gt; &#039;9&#039;,
-    &#039;🃚&#039; =&gt; &#039;10&#039;,
-    &#039;🃛&#039; =&gt; &#039;J&#039;,
-    &#039;🃝&#039; =&gt; &#039;Q&#039;,
-    &#039;🃞&#039; =&gt; &#039;K&#039;,
-    // Hearts
-    &#039;🂡&#039; =&gt; &#039;A&#039;,
-    &#039;🂢&#039; =&gt; &#039;2&#039;,
-    &#039;🂣&#039; =&gt; &#039;3&#039;,
-    &#039;🂤&#039; =&gt; &#039;4&#039;,
-    &#039;🂥&#039; =&gt; &#039;5&#039;,
-    &#039;🂦&#039; =&gt; &#039;6&#039;,
-    &#039;🂧&#039; =&gt; &#039;7&#039;,
-    &#039;🂨&#039; =&gt; &#039;8&#039;,
-    &#039;🂩&#039; =&gt; &#039;9&#039;,
-    &#039;🂪&#039; =&gt; &#039;10&#039;,
-    &#039;🂫&#039; =&gt; &#039;J&#039;,
-    &#039;🂭&#039; =&gt; &#039;Q&#039;,
-    &#039;🂮&#039; =&gt; &#039;K&#039;,
-    // Diamonds
-    &#039;🂱&#039; =&gt; &#039;A&#039;,
-    &#039;🂲&#039; =&gt; &#039;2&#039;,
-    &#039;🂳&#039; =&gt; &#039;3&#039;,
-    &#039;🂴&#039; =&gt; &#039;4&#039;,
-    &#039;🂵&#039; =&gt; &#039;5&#039;,
-    &#039;🂶&#039; =&gt; &#039;6&#039;,
-    &#039;🂷&#039; =&gt; &#039;7&#039;,
-    &#039;🂸&#039; =&gt; &#039;8&#039;,
-    &#039;🂹&#039; =&gt; &#039;9&#039;,
-    &#039;🂺&#039; =&gt; &#039;10&#039;,
-    &#039;🂻&#039; =&gt; &#039;J&#039;,
-    &#039;🂽&#039; =&gt; &#039;Q&#039;,
-    &#039;🂾&#039; =&gt; &#039;K&#039;,
-    // Clubs
-    &#039;🃁&#039; =&gt; &#039;A&#039;,
-    &#039;🃂&#039; =&gt; &#039;2&#039;,
-    &#039;🃃&#039; =&gt; &#039;3&#039;,
-    &#039;🃄&#039; =&gt; &#039;4&#039;,
-    &#039;🃅&#039; =&gt; &#039;5&#039;,
-    &#039;🃆&#039; =&gt; &#039;6&#039;,
-    &#039;🃇&#039; =&gt; &#039;7&#039;,
-    &#039;🃈&#039; =&gt; &#039;8&#039;,
-    &#039;🃉&#039; =&gt; &#039;9&#039;,
-    &#039;🃊&#039; =&gt; &#039;10&#039;,
-    &#039;🃋&#039; =&gt; &#039;J&#039;,
-    &#039;🃍&#039; =&gt; &#039;Q&#039;,
-    &#039;🃎&#039; =&gt; &#039;K&#039;,
-]</span></code>
+        <span class="phpdocumentor-signature__type"><a href="classes/App-Cards-CardDeck.html"><abbr title="\App\Cards\CardDeck">CardDeck</abbr></a></span>
+    <span class="phpdocumentor-signature__name">$cardDeck</span>
+    </code>
+
+    
+    
+    
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_cardRepresentation">
+        $cardRepresentation
+        <a href="classes/App-Cards-CardGraphic.html#property_cardRepresentation" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Cards/CardGraphic.php"><a href="files/src-cards-cardgraphic.html"><abbr title="src/Cards/CardGraphic.php">CardGraphic.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">20</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type"><a href="classes/App-Cards-CardRepresentation.html"><abbr title="\App\Cards\CardRepresentation">CardRepresentation</abbr></a></span>
+    <span class="phpdocumentor-signature__name">$cardRepresentation</span>
+    </code>
 
     
     
@@ -415,11 +415,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Cards/CardGraphic.php"><a href="files/src-cards-cardgraphic.html"><abbr title="src/Cards/CardGraphic.php">CardGraphic.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">74</span>
+    <span class="phpdocumentor-element-found-in__line">25</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">CardGraphic constructor.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
@@ -448,11 +449,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Cards/CardGraphic.php"><a href="files/src-cards-cardgraphic.html"><abbr title="src/Cards/CardGraphic.php">CardGraphic.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">125</span>
+    <span class="phpdocumentor-element-found-in__line">73</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Returns an the count of representation except the randomly chosen cards.</p>
+        <p class="phpdocumentor-summary">Returns the count of cards in the deck excluding a specified card.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -468,7 +469,9 @@
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>The card to exclude.</p>
+</section>
+
             </dd>
             </dl>
 
@@ -479,10 +482,6 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">int</span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>the count of cards.</p>
-</section>
-
             </section>
 
 </article>
@@ -500,11 +499,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Cards/CardGraphic.php"><a href="files/src-cards-cardgraphic.html"><abbr title="src/Cards/CardGraphic.php">CardGraphic.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">140</span>
+    <span class="phpdocumentor-element-found-in__line">84</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Returns an array of randomly chosen cards.</p>
+        <p class="phpdocumentor-summary">Returns a string containing a specified number of randomly chosen cards.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -533,10 +532,6 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">string</span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>An array containing randomly chosen cards.</p>
-</section>
-
             </section>
 
 </article>
@@ -554,11 +549,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Cards/CardGraphic.php"><a href="files/src-cards-cardgraphic.html"><abbr title="src/Cards/CardGraphic.php">CardGraphic.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">93</span>
+    <span class="phpdocumentor-element-found-in__line">37</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Gets all cards as a single string.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">getAllCardsAsString</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
@@ -591,7 +587,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Cards/Card.php"><a href="files/src-cards-card.html"><abbr title="src/Cards/Card.php">Card.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">31</span>
 
     </aside>
 
@@ -628,7 +624,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Cards/CardGraphic.php"><a href="files/src-cards-cardgraphic.html"><abbr title="src/Cards/CardGraphic.php">CardGraphic.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">84</span>
+    <span class="phpdocumentor-element-found-in__line">94</span>
 
     </aside>
 
@@ -636,35 +632,19 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getRepresentation</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">getRepresentation</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string, string&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
     
     
     
-    <h5 class="phpdocumentor-tag-list__heading" id="tags">
-        Tags
-        <a href="classes/App-Cards-CardGraphic.html#method_getRepresentation#tags" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h5>
-    <dl class="phpdocumentor-tag-list">
-                                    <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">@return</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                
-                                                 <section class="phpdocumentor-description"><p>array&lt;string, string&gt;.</p>
-</section>
-
-                                    </dd>
-                                            </dl>
 
     
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+        <span class="phpdocumentor-signature__response_type">array&lt;string, string&gt;</span>
             </section>
 
 </article>
@@ -719,11 +699,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Cards/CardGraphic.php"><a href="files/src-cards-cardgraphic.html"><abbr title="src/Cards/CardGraphic.php">CardGraphic.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">112</span>
+    <span class="phpdocumentor-element-found-in__line">62</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Returns a random card from the representation.</p>
+        <p class="phpdocumentor-summary">Returns a random card from the deck.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -757,11 +737,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Cards/CardGraphic.php"><a href="files/src-cards-cardgraphic.html"><abbr title="src/Cards/CardGraphic.php">CardGraphic.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">102</span>
+    <span class="phpdocumentor-element-found-in__line">45</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Shuffles the deck of cards.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">roll</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
@@ -933,7 +914,8 @@
                 <li>
                     <ul class="phpdocumentor-list -clean">
                                                     <li><a href="classes/App-Cards-Card.html#property_value">$value<a href="classes/App-Cards-CardGraphic.html"></li>
-                                                    <li><a href="classes/App-Cards-CardGraphic.html#property_representation">$representation<a href="classes/App-Cards-CardGraphic.html"></li>
+                                                    <li><a href="classes/App-Cards-CardGraphic.html#property_cardDeck">$cardDeck<a href="classes/App-Cards-CardGraphic.html"></li>
+                                                    <li><a href="classes/App-Cards-CardGraphic.html#property_cardRepresentation">$cardRepresentation<a href="classes/App-Cards-CardGraphic.html"></li>
                                             </ul>
                 </li>
             

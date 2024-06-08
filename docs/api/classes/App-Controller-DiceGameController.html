@@ -89,6 +89,16 @@
     <a href="packages/Application.html" class="">Application</a>
 </h4>
 
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/App.html" class="">App</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="packages/App-Entity.html" class="">Entity</a>
+                
+            </li>
+            </ul>
+
                         </section>
             
     <section class="phpdocumentor-sidebar__category -reports">
@@ -137,7 +147,7 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/DiceGameController.php"><a href="files/src-controller-dicegamecontroller.html"><abbr title="src/Controller/DiceGameController.php">DiceGameController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
@@ -171,51 +181,44 @@
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Controller-DiceGameController.html#method_initCallback">initCallback()</a>
-    <span>
-                                &nbsp;: <abbr title="\App\Controller\HTTP">HTTP</abbr>    </span>
-</dt>
-<dd>Route(&quot;/game/pig/init&quot;, name: &quot;pig_init_post&quot;, methods: [&#039;POST&#039;])</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Controller-DiceGameController.html#method_play">play()</a>
     <span>
-                                &nbsp;: <abbr title="\App\Controller\HTTP">HTTP</abbr>    </span>
+                                &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr>    </span>
 </dt>
 <dd>Route(&quot;/game/pig/play&quot;, name: &quot;pig_play&quot;, methods: [&#039;GET&#039;])</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Controller-DiceGameController.html#method_roll">roll()</a>
     <span>
-                                &nbsp;: <abbr title="\App\Controller\HTTP">HTTP</abbr>    </span>
+                                &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr>    </span>
 </dt>
 <dd>Route(&quot;/game/pig/roll&quot;, name: &quot;pig_roll&quot;, methods: [&#039;POST&#039;])</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Controller-DiceGameController.html#method_save">save()</a>
     <span>
-                                &nbsp;: <abbr title="\App\Controller\HTTP">HTTP</abbr>    </span>
+                                &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr>    </span>
 </dt>
 <dd>Route(&quot;/game/pig/save&quot;, name: &quot;pig_save&quot;, methods: [&#039;POST&#039;])</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Controller-DiceGameController.html#method_testDiceHand">testDiceHand()</a>
     <span>
-                                &nbsp;: <abbr title="\App\Controller\HTTP">HTTP</abbr>    </span>
+                                &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr>    </span>
 </dt>
 <dd>Route(&quot;/game/pig/test/dicehand/{num&lt;\d+&gt;}&quot;, name: &quot;test_dicehand&quot;)</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Controller-DiceGameController.html#method_testRollDice">testRollDice()</a>
     <span>
-                                &nbsp;: <abbr title="\App\Controller\HTTP">HTTP</abbr>    </span>
+                                &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr>    </span>
 </dt>
 <dd>Route(&quot;/game/pig/test/roll&quot;, name: &quot;test_roll_dice&quot;)</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Controller-DiceGameController.html#method_testRollDices">testRollDices()</a>
     <span>
-                                &nbsp;: <abbr title="\App\Controller\HTTP">HTTP</abbr>    </span>
+                                &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr>    </span>
 </dt>
 <dd>Route(&quot;/game/pig/test/roll/{num&lt;\d+&gt;}&quot;, name: &quot;test_roll_num_dices&quot;)</dd>
 
@@ -239,85 +242,6 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_initCallback">
-        initCallback()
-        <a href="classes/App-Controller-DiceGameController.html#method_initCallback" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/DiceGameController.php"><a href="files/src-controller-dicegamecontroller.html"><abbr title="src/Controller/DiceGameController.php">DiceGameController.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">100</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Route(&quot;/game/pig/init&quot;, name: &quot;pig_init_post&quot;, methods: [&#039;POST&#039;])</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">initCallback</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Session\SessionInterface">SessionInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$session</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$request</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Request">Request</abbr></span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$session</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Session\SessionInterface">SessionInterface</abbr></span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
-    
-
-    
-    <section class="phpdocumentor-attributes">
-        <h5 class="phpdocumentor-elements__header" id="attributes">
-            Attributes <a href="classes/App-Controller-DiceGameController.html#method_initCallback#attributes" class="headerlink"><i class="fas fa-link"></i></a>
-
-        </h5>
-                    <dl class="phpdocumentor-argument-list">
-    <dt class="phpdocumentor-argument-list__entry">
-        #[<abbr title="\Symfony\Component\Routing\Annotation\Route">Route</abbr>]
-    </dt>
-        <dd class="phpdocumentor-argument-list__entry">
-        &quot;/game/pig/init&quot;
-    </dd>
-        <dd class="phpdocumentor-argument-list__entry">
-        $name: &quot;pig_init_post&quot;
-    </dd>
-        <dd class="phpdocumentor-argument-list__entry">
-        $methods: [&#039;POST&#039;]
-    </dd>
-    </dl>
-            </section>
-
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>Response</p>
-</section>
-
-            </section>
-
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
     <h4 class="phpdocumentor-element__name" id="method_play">
         play()
         <a href="classes/App-Controller-DiceGameController.html#method_play" class="headerlink"><i class="fas fa-link"></i></a>
@@ -326,7 +250,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/DiceGameController.php"><a href="files/src-controller-dicegamecontroller.html"><abbr title="src/Controller/DiceGameController.php">DiceGameController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">127</span>
+    <span class="phpdocumentor-element-found-in__line">94</span>
 
     </aside>
 
@@ -334,7 +258,7 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">play</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Session\SessionInterface">SessionInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$session</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">play</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Session\SessionInterface">SessionInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$session</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -376,11 +300,7 @@
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>Response</p>
-</section>
-
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span>
             </section>
 
 </article>
@@ -398,7 +318,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/DiceGameController.php"><a href="files/src-controller-dicegamecontroller.html"><abbr title="src/Controller/DiceGameController.php">DiceGameController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">148</span>
+    <span class="phpdocumentor-element-found-in__line">115</span>
 
     </aside>
 
@@ -406,7 +326,7 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">roll</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Session\SessionInterface">SessionInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$session</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">roll</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Session\SessionInterface">SessionInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$session</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -448,11 +368,7 @@
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>Response</p>
-</section>
-
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span>
             </section>
 
 </article>
@@ -470,7 +386,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/DiceGameController.php"><a href="files/src-controller-dicegamecontroller.html"><abbr title="src/Controller/DiceGameController.php">DiceGameController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">183</span>
+    <span class="phpdocumentor-element-found-in__line">150</span>
 
     </aside>
 
@@ -478,7 +394,7 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">save</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Session\SessionInterface">SessionInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$session</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">save</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Session\SessionInterface">SessionInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$session</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -520,11 +436,7 @@
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>Response</p>
-</section>
-
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span>
             </section>
 
 </article>
@@ -542,7 +454,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/DiceGameController.php"><a href="files/src-controller-dicegamecontroller.html"><abbr title="src/Controller/DiceGameController.php">DiceGameController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">68</span>
+    <span class="phpdocumentor-element-found-in__line">67</span>
 
     </aside>
 
@@ -550,7 +462,7 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testDiceHand</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$num</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">testDiceHand</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$num</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -591,11 +503,7 @@
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>Response</p>
-</section>
-
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span>
             </section>
 
 </article>
@@ -613,7 +521,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/DiceGameController.php"><a href="files/src-controller-dicegamecontroller.html"><abbr title="src/Controller/DiceGameController.php">DiceGameController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">22</span>
+    <span class="phpdocumentor-element-found-in__line">21</span>
 
     </aside>
 
@@ -621,7 +529,7 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testRollDice</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">testRollDice</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -650,11 +558,7 @@
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>Response</p>
-</section>
-
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span>
             </section>
 
 </article>
@@ -672,7 +576,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/DiceGameController.php"><a href="files/src-controller-dicegamecontroller.html"><abbr title="src/Controller/DiceGameController.php">DiceGameController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">40</span>
+    <span class="phpdocumentor-element-found-in__line">39</span>
 
     </aside>
 
@@ -680,7 +584,7 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testRollDices</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$num</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">testRollDices</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$num</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -721,11 +625,7 @@
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>Response</p>
-</section>
-
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span>
             </section>
 
 </article>
@@ -842,7 +742,6 @@
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li><a href="classes/App-Controller-DiceGameController.html#method_initCallback">initCallback()</a></li>
                                             <li><a href="classes/App-Controller-DiceGameController.html#method_play">play()</a></li>
                                             <li><a href="classes/App-Controller-DiceGameController.html#method_roll">roll()</a></li>
                                             <li><a href="classes/App-Controller-DiceGameController.html#method_save">save()</a></li>

@@ -29,7 +29,7 @@ class KmomThreeGameControllerTwig extends AbstractController
         return $this->render('kmom03/startdrawing.html.twig');
     }
 
-        #[Route("game/card/results", name: "game_card_results", methods: ["POST", "GET"])]
+    #[Route("game/card/results", name: "game_card_results", methods: ["POST", "GET"])]
     public function gameCardSResults(SessionInterface $session): Response
     {
         $playerPoints = $session->get('sessionPlayerPoints');

@@ -262,3 +262,43 @@ tr:hover {
   align-items: center;
   margin: 25px;
 }
+
+.phpmetrics-images,
+.average-complixity-images,
+.improvments-images {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.phpmetrics-images img {
+  width: 60%;
+  margin: 20px;
+}
+
+.improvments-images-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 10px;
+  margin: 30px;
+}
+
+.improvments-images img {
+  width: 60%;
+  margin: 20px;
+}
+
+.improvments-images-2 img {
+  width: 50%;
+  margin: 20px;
+}
+
+.average-complixity-images img {
+  width: 60%;
+  margin: 20px;
+}
+
+.quality-image img {
+  width: 30%;
+  height: 30%;
+}

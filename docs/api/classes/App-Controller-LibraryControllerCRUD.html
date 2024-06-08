@@ -89,6 +89,16 @@
     <a href="packages/Application.html" class="">Application</a>
 </h4>
 
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/App.html" class="">App</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="packages/App-Entity.html" class="">Entity</a>
+                
+            </li>
+            </ul>
+
                         </section>
             
     <section class="phpdocumentor-sidebar__category -reports">
@@ -137,7 +147,7 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/LibraryControllerCRUD.php"><a href="files/src-controller-librarycontrollercrud.html"><abbr title="src/Controller/LibraryControllerCRUD.php">LibraryControllerCRUD.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
@@ -173,35 +183,35 @@
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Controller-LibraryControllerCRUD.html#method_createBook">createBook()</a>
     <span>
-                                &nbsp;: <abbr title="\App\Controller\HTTP">HTTP</abbr>    </span>
+                                &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr>    </span>
 </dt>
 <dd>Route(&#039;/book/create&#039;, name: &#039;book_create&#039;, methods:[&#039;POST&#039;])</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Controller-LibraryControllerCRUD.html#method_deleteBookById">deleteBookById()</a>
     <span>
-                                &nbsp;: <abbr title="\App\Controller\HTTP">HTTP</abbr>    </span>
+                                &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\RedirectResponse">RedirectResponse</abbr>    </span>
 </dt>
 <dd>Route(&#039;/book/delete&#039;, name: &#039;book_delete&#039;)</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Controller-LibraryControllerCRUD.html#method_showAllBooks">showAllBooks()</a>
     <span>
-                                &nbsp;: <abbr title="\App\Controller\HTTP">HTTP</abbr>    </span>
+                                &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr>    </span>
 </dt>
 <dd>Route(&#039;/books/show&#039;, name: &#039;books_show_all&#039;)</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Controller-LibraryControllerCRUD.html#method_showBookById">showBookById()</a>
     <span>
-                                &nbsp;: <abbr title="\App\Controller\HTTP">HTTP</abbr>    </span>
+                                &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr>    </span>
 </dt>
 <dd>Route(&#039;/book/show&#039;, name: &#039;book_show_by_id&#039;, methods:[&#039;GET&#039;, &#039;POST&#039;])</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Controller-LibraryControllerCRUD.html#method_updateBook">updateBook()</a>
     <span>
-                                &nbsp;: <abbr title="\App\Controller\HTTP">HTTP</abbr>    </span>
+                                &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\RedirectResponse">RedirectResponse</abbr>    </span>
 </dt>
 <dd>Route(&#039;/book/update&#039;, name: &#039;book_update&#039;, methods:[&#039;POST&#039;])</dd>
 
@@ -233,7 +243,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/LibraryControllerCRUD.php"><a href="files/src-controller-librarycontrollercrud.html"><abbr title="src/Controller/LibraryControllerCRUD.php">LibraryControllerCRUD.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">22</span>
+    <span class="phpdocumentor-element-found-in__line">23</span>
 
     </aside>
 
@@ -241,7 +251,7 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">createBook</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Doctrine\Persistence\ManagerRegistry">ManagerRegistry</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$doctrine</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">createBook</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Doctrine\Persistence\ManagerRegistry">ManagerRegistry</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$doctrine</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -290,11 +300,7 @@
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>Response</p>
-</section>
-
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span>
             </section>
 
 </article>
@@ -312,7 +318,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/LibraryControllerCRUD.php"><a href="files/src-controller-librarycontrollercrud.html"><abbr title="src/Controller/LibraryControllerCRUD.php">LibraryControllerCRUD.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">141</span>
+    <span class="phpdocumentor-element-found-in__line">140</span>
 
     </aside>
 
@@ -320,7 +326,7 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">deleteBookById</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Doctrine\Persistence\ManagerRegistry">ManagerRegistry</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$doctrine</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">deleteBookById</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Doctrine\Persistence\ManagerRegistry">ManagerRegistry</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$doctrine</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\RedirectResponse">RedirectResponse</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -366,11 +372,7 @@
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>Response</p>
-</section>
-
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\RedirectResponse">RedirectResponse</abbr></span>
             </section>
 
 </article>
@@ -388,7 +390,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/LibraryControllerCRUD.php"><a href="files/src-controller-librarycontrollercrud.html"><abbr title="src/Controller/LibraryControllerCRUD.php">LibraryControllerCRUD.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">84</span>
+    <span class="phpdocumentor-element-found-in__line">83</span>
 
     </aside>
 
@@ -396,7 +398,7 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">showAllBooks</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Repository-BookRepository.html"><abbr title="\App\Repository\BookRepository">BookRepository</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$bookRepository</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">showAllBooks</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Repository-BookRepository.html"><abbr title="\App\Repository\BookRepository">BookRepository</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$bookRepository</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -442,11 +444,7 @@
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>Response</p>
-</section>
-
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span>
             </section>
 
 </article>
@@ -464,7 +462,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/LibraryControllerCRUD.php"><a href="files/src-controller-librarycontrollercrud.html"><abbr title="src/Controller/LibraryControllerCRUD.php">LibraryControllerCRUD.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">55</span>
+    <span class="phpdocumentor-element-found-in__line">54</span>
 
     </aside>
 
@@ -472,7 +470,7 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">showBookById</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Repository-BookRepository.html"><abbr title="\App\Repository\BookRepository">BookRepository</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$bookRepository</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">showBookById</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Repository-BookRepository.html"><abbr title="\App\Repository\BookRepository">BookRepository</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$bookRepository</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -521,11 +519,7 @@
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>Response</p>
-</section>
-
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span>
             </section>
 
 </article>
@@ -543,7 +537,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/LibraryControllerCRUD.php"><a href="files/src-controller-librarycontrollercrud.html"><abbr title="src/Controller/LibraryControllerCRUD.php">LibraryControllerCRUD.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">111</span>
+    <span class="phpdocumentor-element-found-in__line">110</span>
 
     </aside>
 
@@ -551,7 +545,7 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">updateBook</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Doctrine\Persistence\ManagerRegistry">ManagerRegistry</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$doctrine</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">updateBook</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Doctrine\Persistence\ManagerRegistry">ManagerRegistry</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$doctrine</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\RedirectResponse">RedirectResponse</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -600,11 +594,7 @@
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><abbr title="\App\Controller\HTTP">HTTP</abbr></span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>Response</p>
-</section>
-
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\RedirectResponse">RedirectResponse</abbr></span>
             </section>
 
 </article>

@@ -93,15 +93,4 @@ class CardRepresentation
     {
         return implode('', array_keys($this->representation));
     }
-
-    /**
-     * Returns the rank of a card given its symbol. For clarifying the code.
-     *
-     * @param string $symbol The symbol of the card.
-     * @return string|null The rank of the card.
-     */
-    public function getRank(string $symbol): ?string
-    {
-        return $this->representation[$symbol] ?? null;
-    }
 }

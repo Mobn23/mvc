@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1717772086">
-  <project timestamp="1717772086">
+<coverage generated="1717806872">
+  <project timestamp="1717806872">
     <file name="/home/mobn/dbwebb-kurser/mvc/me/report/src/AppExtension.php">
       <class name="App\AppExtension" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
@@ -114,7 +114,7 @@
     </file>
     <file name="/home/mobn/dbwebb-kurser/mvc/me/report/src/Cards/CardRepresentation.php">
       <class name="App\Cards\CardRepresentation" namespace="global">
-        <metrics complexity="4" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="8" coveredelements="6"/>
+        <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="6" coveredelements="6"/>
       </class>
       <line num="74" type="method" name="getRepresentation" visibility="public" complexity="1" crap="1" count="7"/>
       <line num="76" type="stmt" count="7"/>
@@ -122,9 +122,7 @@
       <line num="84" type="stmt" count="1"/>
       <line num="92" type="method" name="getAllCardsAsString" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="94" type="stmt" count="1"/>
-      <line num="103" type="method" name="getRank" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="105" type="stmt" count="0"/>
-      <metrics loc="108" ncloc="82" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="8" coveredelements="6"/>
+      <metrics loc="97" ncloc="77" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="6" coveredelements="6"/>
     </file>
     <file name="/home/mobn/dbwebb-kurser/mvc/me/report/src/Cards/Game.php">
       <class name="App\Cards\Game" namespace="global">
@@ -928,6 +926,6 @@
       <line num="52" type="stmt" count="0"/>
       <metrics loc="80" ncloc="44" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="16" coveredelements="0"/>
     </file>
-    <metrics files="32" loc="2454" ncloc="1841" classes="31" methods="122" coveredmethods="41" conditionals="0" coveredconditionals="0" statements="613" coveredstatements="102" elements="735" coveredelements="143"/>
+    <metrics files="32" loc="2443" ncloc="1836" classes="31" methods="121" coveredmethods="41" conditionals="0" coveredconditionals="0" statements="612" coveredstatements="102" elements="733" coveredelements="143"/>
   </project>
 </coverage>

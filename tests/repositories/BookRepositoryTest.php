@@ -5,6 +5,7 @@ namespace App\Dice;
 use PHPUnit\Framework\TestCase;
 use App\Repository\BookRepository;
 use Doctrine\Persistence\ManagerRegistry;
+
 /**
  * Test cases for class DiceHand.
  */

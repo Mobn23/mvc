@@ -89,6 +89,16 @@
     <a href="packages/Application.html" class="">Application</a>
 </h4>
 
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/App.html" class="">App</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="packages/App-Entity.html" class="">Entity</a>
+                
+            </li>
+            </ul>
+
                         </section>
             
     <section class="phpdocumentor-sidebar__category -reports">
@@ -119,7 +129,8 @@
             <div class="phpdocumentor-element__package">
             in package
             <ul class="phpdocumentor-breadcrumbs">
-                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/App.html">App</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/App-Entity.html">Entity</a></li>
                             </ul>
         </div>
     
@@ -134,13 +145,30 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Product.php"><a href="files/src-entity-product.html"><abbr title="src/Entity/Product.php">Product.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8</span>
+    <span class="phpdocumentor-element-found-in__line">14</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Class Product</p>
 
 
+
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/App-Entity-Product.html#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">ORM\Entity</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>(repositoryClass=ProductRepository::class)</p>
+</section>
+
+                                    </dd>
+                                            </dl>
 
 
     <section class="phpdocumentor-attributes">
@@ -211,30 +239,35 @@
     <span>
                                 &nbsp;: int|null    </span>
 </dt>
+<dd>Get the ID of the product.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Product.html#method_getName">getName()</a>
     <span>
                                 &nbsp;: string|null    </span>
 </dt>
+<dd>Get the name of the product.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Product.html#method_getValue">getValue()</a>
     <span>
                                 &nbsp;: int|null    </span>
 </dt>
+<dd>Get the value of the product.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Product.html#method_setName">setName()</a>
     <span>
                                 &nbsp;: static    </span>
 </dt>
+<dd>Set the name of the product.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Product.html#method_setValue">setValue()</a>
     <span>
                                 &nbsp;: static    </span>
 </dt>
+<dd>Set the value of the product.</dd>
 
     </dl>
 
@@ -266,7 +299,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Product.php"><a href="files/src-entity-product.html"><abbr title="src/Entity/Product.php">Product.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">24</span>
 
     </aside>
 
@@ -278,8 +311,40 @@
      = <span class="phpdocumentor-signature__default-value">null</span></code>
 
     
+        <section class="phpdocumentor-description"><p>The ID of the product.</p>
+</section>
+
     
-    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/App-Entity-Product.html#property_id#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">ORM\Id</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                             
+                                    </dd>
+                                                <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">ORM\GeneratedValue</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                             
+                                    </dd>
+                                                <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">ORM\Column</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>(type=&quot;integer&quot;)</p>
+</section>
+
+                                    </dd>
+                                            </dl>
 
     
     <section class="phpdocumentor-attributes">
@@ -322,7 +387,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Product.php"><a href="files/src-entity-product.html"><abbr title="src/Entity/Product.php">Product.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">34</span>
 
     </aside>
 
@@ -334,8 +399,26 @@
      = <span class="phpdocumentor-signature__default-value">null</span></code>
 
     
+        <section class="phpdocumentor-description"><p>The name of the product.</p>
+</section>
+
     
-    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/App-Entity-Product.html#property_name#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">ORM\Column</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>(type=&quot;string&quot;, length=255)</p>
+</section>
+
+                                    </dd>
+                                            </dl>
 
     
     <section class="phpdocumentor-attributes">
@@ -371,7 +454,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Product.php"><a href="files/src-entity-product.html"><abbr title="src/Entity/Product.php">Product.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">42</span>
 
     </aside>
 
@@ -383,8 +466,26 @@
      = <span class="phpdocumentor-signature__default-value">null</span></code>
 
     
+        <section class="phpdocumentor-description"><p>The value of the product.</p>
+</section>
+
     
-    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/App-Entity-Product.html#property_value#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">ORM\Column</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>(type=&quot;integer&quot;)</p>
+</section>
+
+                                    </dd>
+                                            </dl>
 
     
     <section class="phpdocumentor-attributes">
@@ -422,11 +523,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Product.php"><a href="files/src-entity-product.html"><abbr title="src/Entity/Product.php">Product.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">22</span>
+    <span class="phpdocumentor-element-found-in__line">50</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Get the ID of the product.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">getId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|null</span></code>
@@ -459,11 +561,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Product.php"><a href="files/src-entity-product.html"><abbr title="src/Entity/Product.php">Product.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">27</span>
+    <span class="phpdocumentor-element-found-in__line">60</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Get the name of the product.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">getName</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
@@ -496,11 +599,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Product.php"><a href="files/src-entity-product.html"><abbr title="src/Entity/Product.php">Product.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">39</span>
+    <span class="phpdocumentor-element-found-in__line">83</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Get the value of the product.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">getValue</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|null</span></code>
@@ -533,11 +637,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Product.php"><a href="files/src-entity-product.html"><abbr title="src/Entity/Product.php">Product.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">71</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Set the name of the product.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">setName</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">static</span></code>
@@ -580,11 +685,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Product.php"><a href="files/src-entity-product.html"><abbr title="src/Entity/Product.php">Product.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">44</span>
+    <span class="phpdocumentor-element-found-in__line">94</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Set the value of the product.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">setValue</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">static</span></code>

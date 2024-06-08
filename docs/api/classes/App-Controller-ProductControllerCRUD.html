@@ -89,6 +89,16 @@
     <a href="packages/Application.html" class="">Application</a>
 </h4>
 
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="packages/App.html" class="">App</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="packages/App-Entity.html" class="">Entity</a>
+                
+            </li>
+            </ul>
+
                         </section>
             
     <section class="phpdocumentor-sidebar__category -reports">
@@ -299,7 +309,7 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">deleteProductById</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Doctrine\Persistence\ManagerRegistry">ManagerRegistry</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$doctrine</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">deleteProductById</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Doctrine\Persistence\ManagerRegistry">ManagerRegistry</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$doctrine</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$productId</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -314,7 +324,7 @@
                 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$id</span>
+                <span class="phpdocumentor-signature__argument__name">$productId</span>
                 : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
@@ -335,7 +345,7 @@
         #[<abbr title="\Symfony\Component\Routing\Attribute\Route">Route</abbr>]
     </dt>
         <dd class="phpdocumentor-argument-list__entry">
-        &#039;/product/delete/{id}&#039;
+        &#039;/product/delete/{productId}&#039;
     </dd>
         <dd class="phpdocumentor-argument-list__entry">
         $name: &#039;product_delete_by_id&#039;
@@ -434,7 +444,7 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">showProductById</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Repository-ProductRepository.html"><abbr title="\App\Repository\ProductRepository">ProductRepository</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$productRepository</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">showProductById</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Repository-ProductRepository.html"><abbr title="\App\Repository\ProductRepository">ProductRepository</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$productRepository</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$productId</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -449,7 +459,7 @@
                 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$id</span>
+                <span class="phpdocumentor-signature__argument__name">$productId</span>
                 : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
@@ -470,7 +480,7 @@
         #[<abbr title="\Symfony\Component\Routing\Attribute\Route">Route</abbr>]
     </dt>
         <dd class="phpdocumentor-argument-list__entry">
-        &#039;/product/show/{id}&#039;
+        &#039;/product/show/{productId}&#039;
     </dd>
         <dd class="phpdocumentor-argument-list__entry">
         $name: &#039;product_by_id&#039;
@@ -505,7 +515,7 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">updateProduct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Doctrine\Persistence\ManagerRegistry">ManagerRegistry</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$doctrine</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">updateProduct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Doctrine\Persistence\ManagerRegistry">ManagerRegistry</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$doctrine</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$productId</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -520,7 +530,7 @@
                 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$id</span>
+                <span class="phpdocumentor-signature__argument__name">$productId</span>
                 : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
@@ -548,7 +558,7 @@
         #[<abbr title="\Symfony\Component\Routing\Attribute\Route">Route</abbr>]
     </dt>
         <dd class="phpdocumentor-argument-list__entry">
-        &#039;/product/update/{id}/{value}&#039;
+        &#039;/product/update/{productId}/{value}&#039;
     </dd>
         <dd class="phpdocumentor-argument-list__entry">
         $name: &#039;product_update&#039;

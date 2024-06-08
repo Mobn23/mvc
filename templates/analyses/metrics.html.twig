@@ -14,39 +14,157 @@
     </ul>
 
     <h2 id="introduktion">Introduktion</h2>
-    <h5>De sex C:na är sex princepler som man kan följa för att förbättra och en ren kod. De är:</h5>
+    <h5>De sex C:na är sex princepler som man kan följa för att förbättra och en ren kod. De är:</h5><br>
     <ul>
         <li>Cohesion:</li>
-        <p>Det är till exempel att en klass har hög cohesion och kan hantera sin egen funktionalitet perfekt. En klass med hög cohesion är ansvarig för en enda uppgift eller en nära relaterad uppsättning uppgifter, vilket gör den lättare att förstå och underhålla.</p>
+        <p>Det är till exempel att en klass har hög cohesion och kan hantera sin egen funktionalitet perfekt. En klass med hög cohesion är ansvarig för en enda uppgift eller en nära relaterad uppsättning uppgifter, vilket gör den lättare att förstå och underhålla.</p><br>
 
         <li>Code Style:</li>
-        <p>Det är viktigt att följa PHP-standarder när man skriver kod, till exempel metodnamn, klassnamn och placering av klamrar. En konsekvent kodstil förbättrar läsbarheten och underhållbarheten av koden.</p>
+        <p>Det är viktigt att följa PHP-standarder när man skriver kod, till exempel metodnamn, klassnamn och placering av klamrar. En konsekvent kodstil förbättrar läsbarheten och underhållbarheten av koden.</p><br>
 
         <li>Coverage:</li>
         <p>Det handlar om enhetstester och att mäta hur stor procentandel av koden som testas. Hög täckning innebär att en stor del av koden exekveras under testning, vilket kan indikera att koden är vältestad.</p>
-        <p>Enligt min kod så har jag 20% Coverage PHP Unit Test.Därtill har jag 78.13 % classes never called by tests inom PHPmetrics verktyg.</p>
+        <p>Enligt min kod så har jag 85 % classes never called by tests inom PHPmetrics verktyg.</p><br>
 
         <li>Coupling:</li>
         <p>Det handlar om hur mycket en klass eller modul känner till en annan klass eller modul. Lägre coupling innebär att klasser eller moduler är mer oberoende, vilket förbättrar underhållbarhet och återanvändbarhet.</p>
         <p>Inom Scrutinizer så finns det två typer till Coupling:</p>
         <p>Afferent coupling (bring it in)vilket är när en viss class användas inom många andra classer eller controllers(Modul) så är det inom min kod den mest är CardGraphic 5, CardHand 4, CardRepresentation 3 ... och med mera </p>
-        <p>Efferent coupling (bring it out) vilket är när en viss class eller controller (Modul) använder eller beror på andrä classer t.ex inom min kod CardControllerJson beroende på 7 andra classer, DiceGameController på 6, och med mera.</p>
+        <p>Efferent coupling (bring it out) vilket är när en viss class eller controller (Modul) använder eller beror på andrä classer t.ex inom min kod CardControllerJson beroende på 7 andra classer, DiceGameController på 6, och med mera.</p><br>
 
         <li>Complexity:</li>
         <p>Det handlar om hur komplicerad koden är, till exempel genom att använda många if-satser, else-satser, etc. Hög komplexitet gör koden svårare att förstå och underhålla, medan lägre komplexitet innebär mer lättläst och enklare kod.</p>
-        <p>Så enligt PHPMetrics på min kod så har jag 2.81 som <b>Average cyclomatic complexity by class</b> och enligt modular har LibraryControllerCRUD den mest komplixitet som är 361.35 .</p>
+        <p>Så enligt PHPMetrics på min kod så har jag 3.00 som <b>Average cyclomatic complexity by class</b> och enligt modular har LibraryControllerCRUD den mest komplixitet som är 361.35 .</p><br>
 
         <li>CRAP (Change Risk Anti-Patterns):</li>
-        <p>Det är ett mått som kombinerar kodens komplexitet och dess testtäckning. Hög CRAP-poäng indikerar kod som är både komplex och dåligt testad, vilket ökar risken för fel och gör koden svårare att underhålla.</p>
+        <p>Det är ett mått som kombinerar kodens komplexitet och dess testtäckning. Hög CRAP-poäng indikerar kod som är både komplex och dåligt testad, vilket ökar risken för fel och gör koden svårare att underhålla.</p><br>
     </ul>
+
     <h2 id="phpmetrics">Phpmetrics</h2>
-    <p>This is the report text for Kmom07.</p>
+    <p>Nu enligt PHPmetrics verktyg så har jag flera förbättringspotential så att finns det flera svaga punkter och flaskhalsar inom coverage, komplixitet, Average bugs by class, violations så att har jag 9 av dem, samt man kan förbättra maintainability av varje modul(class,controller eller templates(M,C eller V)). Som står i bilderna nedan:</p>
+    <div class="phpmetrics-images">
+        <a href="{{ asset('img/3.00.png') }}"><img src="{{ asset('img/3.00.png') }}" alt="3.00"></a>
+        <a href="{{ asset('img/bugs.png') }}"><img src="{{ asset('img/bugs.png') }}" alt="bugs"></a>
+        <a href="{{ asset('img/balls.png') }}"><img src="{{ asset('img/balls.png') }}" alt="balls"></a>
+    </div>
+
+    <h5>Average Cyclomatic Complexity per Class:</h5>
+    <p>Genom att analysera genomsnittlig cyklomatisk komplexitet och Maintainability per klass, kunde jag identifiera klasser med hög komplexitet och mindre Maintainability. Dessa klasser kan vara svårare att förstå och underhålla, vilket skapar potentiella flaskhalsar i kodflödet. Att minska komplexiteten i dessa klasser genom refaktorering eller omstrukturering kan öka kodens läsbarhet och underhållbarhet.</p><br>
+
+    <h5>Average Bugs per Class:</h5>
+    <p>Analysen av genomsnittliga buggar per klass avslöjade klasser som har en högre incidens av buggar jämfört med andra. Dessa klasser utgör potentiella risker för buggar och fel i produktionsmiljön. Genom att prioritera testning och felsökning i dessa klasser kan jag minska risken för buggar och förbättra kodens stabilitet.</p><br>
+
+    <h5>Unit Test Coverage for Whole Code :</h5>
+    <p>Rapporten visade också enhetstesttäckningen för hela koden, vilket avslöjade områden som har låg eller bristfällig testtäckning. Dessa områden kan vara sårbara för buggar och funktionsfel som inte upptäcks under utveckling. Genom att öka enhetstesttäckningen för dessa områden kan jag förbättra kodens kvalitet och minska risken för oväntade fel i produktionsmiljön.</p><br>
+
+    <p>Genom att ta hänsyn till dessa flaskhalsar och svaga punkter i min kod kan jag fokusera mina resurser på att adressera dem för att förbättra kodens övergripande kvalitet och underhållbarhet. Att använda Phpmetrics har varit en värdefullt verktyg för att identifiera dessa områden och vägleda mig mot att ta strategiska åtgärder för att förbättra min kodbas.</p><br>
+
     <h2 id="scrutinizer">Scrutinizer</h2>
-    <p>This is the report text for Kmom10.</p>
+    <p>Enligt Scrutinizers rapport för min kod identifierades flera områden med förbättringspotential och svagheter. Genom att använda mätvärden som build status, coverage, och quality, kunde jag pinpointa tre flaskhalsar och svaga punkter i koden som behöver uppmärksammas för att förbättra kodbasens kvalitet och underhållbarhet. </p>
+    <div class="quality-image">
+        <a href="{{ asset('img/coverage-15.png') }}"><img src="{{ asset('img/coverage-15.png') }}" alt="coverage-15"></a>
+    </div>
+
+    <h5>Coverage (15%):</h5>
+    <p>Coverage-mätvärdet visar andelen kod som är täckt av enhetstester. En coverage-procent på 15% indikerar att en stor del av koden inte är testad, vilket ökar risken för oupptäckta buggar. Genom att öka coverage kan jag förbättra kodens tillförlitlighet och kvalitet. Målet är att höja denna siffra betydligt genom att skriva fler enhetstester för att täcka de mest kritiska delarna av koden.</p>
+    <a href="https://scrutinizer-ci.com/g/Mobn23/mvc/code-structure/main/code-coverage">
+        <img src="https://scrutinizer-ci.com/g/Mobn23/mvc/badges/coverage.png?b=main" alt="Coverage">
+    </a><br>
+
+    <h5>Build Status:</h5>
+    <p>Analys av build status indikerar huruvida koden kompilerar och körs som förväntat utan fel. Eventuella felaktiga builds indikerar problem som behöver åtgärdas omedelbart. Genom att säkerställa att build status alltid är grön, kan jag garantera att koden är i ett fungerande tillstånd och att inga kritiska fel introduceras.</p>
+    <a href="https://scrutinizer-ci.com/g/Mobn23/mvc/build-status/main">
+        <img src="https://scrutinizer-ci.com/g/Mobn23/mvc/badges/build.png?b=main" alt="Build Status">
+    </a><br>
+
+    <h5>Quality (6.68):</h5>
+    <p>Quality-mätvärdet, som är 6.68, analyserar kodens struktur och följsamhet till bästa praxis. Ett lägre quality score indikerar att det finns mycket utrymme för förbättring. Genom att förbättra quality score kan jag öka kodens läsbarhet och underhållbarhet. Detta innebär att refaktorera kod för att följa bättre kodningsstandarder och minska teknisk skuld.</p>
+    <a href="https://scrutinizer-ci.com/g/Mobn23/mvc/?branch=main">
+        <img src="https://scrutinizer-ci.com/g/Mobn23/mvc/badges/quality-score.png?b=main" alt="Quality">
+    </a><br>
+
+    <h3>6C Analys:</h3>
+    <h5>Complexity:</h5>
+    <p>Cyclomatic Complexity: En hög cyklomatisk komplexitet innebär att koden är svårare att förstå och underhålla. Genom att reducera komplexiteten kan jag förbättra kodens läsbarhet och underhållbarhet.</p><br>
+
+    <h5>Coverage:</h5>
+    <p>Unit Test Coverage: En låg testtäckning innebär att många delar av koden inte är testade, vilket ökar risken för buggar och oväntade fel. Att öka testtäckningen är kritiskt för att säkerställa kodens tillförlitlighet.</p><br>
+
+    <h5>Cohension:</h5>
+    <p>Genom att refaktorera klasserna och ge varje klass en specifik funktionalitet, blir koden mer direkt och tydlig. Detta leder till ökad läsbarhet, bättre underhållbarhet och minskad komplexitet i koden. En tydligare separation av ansvarsområden hjälper också till att förebygga buggar och förbättrar testbarheten av varje enskild komponent.</p><br>
+
+    <h5>Code Quality:</h5>
+    <p>Quality Score: En låg quality score indikerar att koden inte följer bästa praxis och standarder, vilket kan leda till svårigheter vid underhåll och vidareutveckling.</p><br>
+
+    <h5>Consistency:</h5>
+    <p>Violations: Ett högt antal violations visar på bristande konsistens i kodningen. Genom att minska antalet violations kan koden bli mer konsekvent och lättare att förstå och underhålla.</p><br>
+
     <h2 id="förbättringar">Förbättringar</h2>
-    <p>This is the report text for Kmom06.</p>
+    <p>Efter att ha analyserat min kod med hjälp av PHPmetrics och Scrutinizer, identifierade jag flera områden som behövde förbättras. Här är de huvudsakliga förbättringarna jag valde att fokusera på att:</p><br>
+
+    <h5>Minska komplexiteten i klasser och metoder:</h5>
+    <p>Splitta controllers för att minska komplexiteten i varje enskild controller.</p>
+    <p>Refaktorisera och förenkla controllers för att förbättra läsbarheten och underhållbarheten.</p><br>
+
+    <h5>Öka kodtäckning (Test Coverage):</h5>
+    <p>Skriva fler enhetstester för att öka täckningen vilket är 15%.</p><br>
+
+    <h5>Förbättra kodkvaliteten:</h5>
+    <p>Använda CS Fixer och PHPMD för att identifiera och åtgärda kodstil- och kvalitetsproblem.</p>
+    <p>Minska antalet violations och warnings med hjälp av PHPStan och Scrutinizer.</p>
+    <p>Lägga till DocBlocks för att förbättra dokumentationen.</p><br>
+
+    <h5>Minska Bugs:</h5>
+    <p>Genom att minska Average Bugs per class förbättrar vi kodens tillförlitlighet och kvalitet. Detta bidrar till en mer stabil och felfri kodbas.</p><br>
+
+    <h5>Fixa issues:</h5>
+    <p>Genom att åtgärda identifierade problem och fel i koden, förbättrar vi kodens kvalitet och minskar risken för oväntade buggar och fel. Detta leder till en stabilare och mer tillförlitlig kodbas.</p><br>
+
+    <h5>Genomförda Förbättringar:</h5>
+    <p>Här är en detaljerad redogörelse för de förbättringar jag genomförde och deras påverkan på mätvärdena:</p>
+
+    <h6>Minskning av komplexitet:</h6>
+    <p>Splittade controllers för att ge varje controller ett specifikt ansvar. Detta minskade den genomsnittliga cyklomatiska komplexiteten från 3.00 till 2.78 så att i tre steg gorde jag detta.</p>
+    <p>Efter ytterligare refaktorering och förenkling av LibraryControllerCRUD minskade dess komplexitet från 13 till 8.</p>
+    <p>Förenklade KmomThreeGameController och minskade dess komplexitet från 9 till 6. Detta minskade den övergripande komplexiteten.</p><br>
+    <div class="average-complixity-images">
+        <a href="{{ asset('img/2.87.png') }}"><img src="{{ asset('img/2.87.png') }}" alt="2.87"></a>
+        <a href="{{ asset('img/2.97.png') }}"><img src="{{ asset('img/2.97.png') }}" alt="2.97"></a>
+        <a href="{{ asset('img/3.00.png') }}"><img src="{{ asset('img/3.00.png') }}" alt="3.00"></a>
+    </div>
+
+    <h6>Ökning av kodtäckning:</h6>
+    <p>Lagt till fler enhetstester vilket ökade testtäckningen från 15% till 20%.</p><br>
+
+    <h6>Förbättring av kodkvalitet:</h6>
+    <p>Användning av CS Fixer och CS Fixer för att åtgärda kodstilproblem, så att fixade jag alla klassers och metoders PHP doc-block och namn enligt PHP Code-style standars.</p>
+    <p>Användning av PHPMD för att identifiera och åtgärda problem i koden, vilket minskade den genomsnittliga cyklomatiska komplexiteten från 3.00 till 2.78</p><br>
+
+    <h6></h6>
+    <p></p><br>
+
+    <div class="improvments-images">
+        <a href="{{ asset('img/coverage-20.png') }}"><img src="{{ asset('img/coverage-20.png') }}" alt="coverage-20"></a>
+        <a href="{{ asset('img/bugs-0.9.png') }}"><img src="{{ asset('img/bugs-0.9.png') }}" alt="bugs-0.9"></a>
+        <a href="{{ asset('img/3.00-improved.png') }}"><img src="{{ asset('img/3.00-improved.png') }}" alt="3.00-improved"></a>
+    </div>
+
+    <h5>Minska Bugs och Implementera Best Practices:</h5>
+    <p>Genom att åtgärda buggar och implementera bästa praxis förbättrar vi kodens tillförlitlighet, kvalitet och underhållbarhet. Genom att följa etablerade riktlinjer och standarder säkerställer vi att koden är robust och hållbar över tid.</p>
+    <p>Genom att öka testtäckningen med enhetstester, fixa issues, bugs och minska komplexitet så förbättrar vi tillförlitligheten och stabiliteten i vår kodbas. Omfattande enhetstester säkerställer att en större del av koden valideras, vilket minskar risken för oidentifierade buggar och fel.</p>
+
+    <div class="improvments-images-2">
+        <a href="{{ asset('img/doc-bp.png') }}"><img src="{{ asset('img/doc-bp.png') }}" alt="doc-bp"></a>
+        <a href="{{ asset('img/doc-bugs.png') }}"><img src="{{ asset('img/doc-bugs.png') }}" alt="doc-bugs"></a>
+        <a href="{{ asset('img/crap.png') }}"><img src="{{ asset('img/crap.png') }}" alt="crap"></a>
+        <a href="{{ asset('img/averages.png') }}"><img src="{{ asset('img/averages.png') }}" alt="averages"></a>
+    </div>
+
     <h2 id="diskussion">Diskussion</h2>
-    <p>This is the report text for Kmom07.</p>
+    <p>Genom att aktivt arbeta med att förbättra kodkvaliteten och implementera "clean code" -principer på det sättet vi just gjort, kan vi definitivt uppnå betydande förbättringar i vår kodbas. Att fixa buggar, öka testtäckning och minska komplexitet är alla viktiga steg för att skapa en mer robust och underhållbar kod.</p>
+    <p>Det finns flera fördelar med att arbeta på detta sätt. För det första kan det öka kvaliteten på vår produkt och minska risken för fel och buggar, vilket kan leda till ökad tillförlitlighet och användarnöjdhet. Dessutom kan det göra koden mer lättläst och förståelig, vilket underlättar för teamet att samarbeta och underhålla koden över tid.</p>
+    <p>Å andra sidan kan det finnas nackdelar med att fokusera för mycket på att förbättra kodkvaliteten på det sättet. Det kan vara lätt att fastna i att förbättra små detaljer och förlora fokus på att leverera funktionalitet till användarna. Dessutom kan överdrivet fokus på kodkvalitet ibland leda till överkomplexitet eller överdesign, vilket kan göra koden svårare att förstå och underhålla.</p>
+    <p>Det finns också andra möjligheter att jobba mot "clean code". Att använda code review processes, continuous integration and testing, samt att följa etablerade kodningsstandarder och design patterns är alla effektiva strategier för att upprätthålla kodkvalitet. Dessutom kan utbildning och kunskapsdelning inom teamet vara avgörande för att främja en kultur av "clean code".</p>
 
     {% endblock %}
 
