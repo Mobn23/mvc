@@ -44,7 +44,6 @@ class LibraryControllerCRUD extends AbstractController
         return $this->redirectToRoute('books_show_all');
     }
 
-
     /**
      * Route('/book/show', name: 'book_show_by_id', methods:['GET', 'POST'])
      * @param BookRepository $bookRepository
@@ -129,7 +128,6 @@ class LibraryControllerCRUD extends AbstractController
 
         return $this->redirectToRoute('books_show_all');
     }
-
 
     /**
      * Route('/book/delete', name: 'book_delete')
