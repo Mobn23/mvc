@@ -1,0 +1,33 @@
+{% extends "baseproject.html.twig" %}
+
+{% block title %}Api{% endblock %}
+
+{% block main %}
+    <h1>API Summary</h1>
+    <ul>
+        <li><a href="{{ path('api_game_state') }}">/api/game/state</a> - Game state. </li><br>
+        <li><a href="{{ path('api_hit') }}">/api/hit</a> - Player Hit card. </li><br>
+        <li><a href="{{ path('api_dealer_turn') }}">/api/dealer/turn</a> - Dealer turn drawing cards as long as < 17. </li><br>
+
+        <li>Game start</li>
+        <form method="POST" action="{{ path('api_start_game') }}">
+            <label for="player-name">Player Name:</label>
+            <input type="text" name="api_name">
+
+            <label for="player-bet">Bet Balance:</label>
+            <input type="number" name="api_bet">
+
+            <button type="submit">Start New Game</button>
+        </form><br>
+
+        <li>Create Player</li>
+        <form method="POST" action ="{{ path('api_create_player') }}">
+            <label for="player-name">Player Name:</label>
+            <input type="text" name="test_names">
+
+            <label for="player-bet">Bet Balance:</label>
+            <input type="number" name="test_bets">
+            <button type="submit">Create Player</button>
+        </form>
+    </ul>
+{% endblock %}

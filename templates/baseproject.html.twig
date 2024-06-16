@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Project{% endblock %}</title>
+            <link rel="icon" href="{{ asset('img/glider.svg') }}">
+            <script src="https://kit.fontawesome.com/6c05f714b3.js" crossorigin="anonymous"></script>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </head>
+    <body class="project-body">
+        <header class="project-header" style="background-image: url({{ asset('img/proj-cover.jpg') }})">
+            <span class="project-title">My Symfony Site</span>
+        </header>
+
+        <nav class="project-nav">
+            <ul>
+                <li><a href="{{ path('proj') }}">Main</a></li>
+                <li><a href="{{ path('proj_about') }}">About</a></li>
+                <li><a href="{{ path('proj_api') }}">API</a></li>
+            </ul>
+        </nav>
+
+        <main class="project-main">
+            {% block main %}{% endblock %}
+        </main>
+
+    </body>
+
+    <footer class="project-footer">
+        {% block footer %}{% endblock %}
+    </footer>
+</html>

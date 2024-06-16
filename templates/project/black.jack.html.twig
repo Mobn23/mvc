@@ -1,0 +1,61 @@
+{% extends "baseproject.html.twig" %}
+
+{% block title %}Black Jack{% endblock %}
+
+{% import 'project/macros.html.twig' as macros %}
+
+{% block main %}
+    <div class="game-area">
+        <div class="dealer-data">
+            <li>Dealer's hand:</li><br>
+            {{ macros.renderCards(dealer.hand) }}
+
+            <div class="bet">
+                <em>Bet: {{ dealer.bet }}</em>
+            </div>
+        </div>
+
+        <div class="players-data">
+            {% for player in gameState %}
+                <div class="player-data">
+                    <h3>{{ player.name }}</h3>
+                    {{ macros.renderCards(player.hand) }}
+
+                    {{ player.handPoints }}
+
+                    <div class="bet">
+                        <em>Bet: {{ player.bet }}</em>
+                    </div>
+
+                    {% if player.busted %}
+                        <em>Busted</em>
+                    {% elseif player.stayed %}
+                        <em>Stayed</em>
+                    {% elseif player.blackjack %}
+                        <em>Black Jack</em>
+                    {% else %}
+                        <form method="POST" action="{{ path('hit', {'playerName': player.name}) }}">
+                            <button type="submit">Hit</button>
+                        </form>
+                        <form method="POST" action="{{ path('stay', {'playerName': player.name}) }}">
+                            <button type="submit">Stay</button>
+                        </form>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% set allDone = true %}
+    {% for player in gameState %}
+        {% if not player.done %}
+            {% set allDone = false %}
+        {% endif %}
+    {% endfor %}
+
+    {% if allDone %}
+        <form method="POST" action="{{ path('proj') }}">
+            <button type="submit">Start a New Round</button>
+        </form>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "baseproject.html.twig" %}
+
+{% block title %}Player Names{% endblock %}
+
+{% block main %}
+    <h1>Enter Player Names</h1>
+    <form id="player-form" method="post" action="{{ path('start_game') }}" onsubmit="submitForm(event)">
+        {% for i in 1..numPlayers %}
+            <label for="player-name{{ i }}">Player {{ i }} Name:</label>
+            <input type="text" id="player-name{{ i }}" name="names" required oninput="updatePlayerData({{ i }})">
+
+            <label for="player-bet{{ i }}">Bet Balance:</label>
+            <input type="number" id="player-bet{{ i }}" name="bets" required oninput="updatePlayerData({{ i }})">
+            <br>
+        {% endfor %}
+        <input type="hidden" name="playerData" value="">
+        <button type="submit">Submit Names</button>
+    </form>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        console.log('Script loaded');
+
+        let playerData = [];
+        let previousValues = {};
+
+        function updatePlayerData(index) {
+            let playerName = document.getElementById('player-name' + index).value;
+            let betBalance = parseInt(document.getElementById('player-bet' + index).value);
+
+            let existingPlayerIndex = playerData.findIndex(player => player.index === index);
+            if (existingPlayerIndex !== -1) {
+                playerData[existingPlayerIndex] = { index: index, name: playerName, bet: betBalance };
+            } else {
+                playerData.push({ index: index, name: playerName, bet: betBalance });
+            }
+
+            console.log('Updated playerData:', playerData);
+        }
+
+        document.addEventListener('focusin', function(event) {
+            if (event.target.tagName === 'INPUT') {
+                previousValues[event.target.id] = event.target.value;
+            }
+        });
+
+        document.addEventListener('focusout', function(event) {
+            if (event.target.tagName === 'INPUT') {
+                let previousValue = previousValues[event.target.id];
+                console.log('Previous value of', event.target.id, ':', previousValue);
+            }
+        });
+
+        function submitForm(event) {
+            event.preventDefault();
+            console.log('Form submitted');
+            console.log('Final playerData:', playerData);
+
+            let form = document.getElementById('player-form');
+            form.querySelector('input[name="playerData"]').value = JSON.stringify(playerData);
+            console.log('Serialized playerData:', JSON.stringify(playerData));
+            form.submit();
+        }
+    </script>
+{% endblock %}

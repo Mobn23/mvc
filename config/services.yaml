@@ -26,3 +26,4 @@ services:
     # config/services.yaml
     App\AppExtension:
         tags: ['twig.extension']
+

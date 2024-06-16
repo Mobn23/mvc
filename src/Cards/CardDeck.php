@@ -30,7 +30,11 @@ class CardDeck
     {
         $keys = array_keys($this->cardRepresentation->getRepresentation());
         shuffle($keys);
-        return $keys[array_rand($keys)];
+        $randomCard = $keys[array_rand($keys)];
+        $representations = $this->cardRepresentation->getRepresentation();
+        unset($representations[$randomCard]);
+        $this->cardRepresentation->setRepresentation($representations);
+        return $randomCard;
     }
 
     /**

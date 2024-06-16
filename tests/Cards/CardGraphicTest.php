@@ -42,7 +42,7 @@ class CardGraphicTest extends TestCase
         $cardGraphic = new CardGraphic();
         $randomCard = $cardGraphic->randomCard();
         $representationKeys = array_keys($cardGraphic->getRepresentation());
-        $this->assertContains($randomCard, $representationKeys);
+        $this->assertNotContains($randomCard, $representationKeys);
 
         $stub = $this->createMock(CardGraphic::class);
         // Configure the stub.

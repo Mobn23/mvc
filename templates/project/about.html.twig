@@ -1,0 +1,46 @@
+{% extends "baseproject.html.twig" %}
+
+{% block title %}About{% endblock %}
+
+{% block main %}
+<h1>Blackjack: Quick Play Guide</h1>
+
+<h2>Objective:</h2>
+<p>Aim to have a hand value higher than the dealer's without exceeding 21. If your hand exceeds 21, you bust and lose your bet.</p><br>
+
+<h2>How to Play:</h2>
+<h4>Choose number of players</h4>
+<h4>Enter players' names</h4>
+<h4>Place players' Bets</h4>
+<p>Each player places a bet. The dealer does not bet.</p><br>
+
+<h4>Dealing the Cards:</h4>
+<p>The dealer gives two faced-up cards to each player.</p>
+<p>The dealer has a card faced-up.</p><br>
+
+<h4>Card Values:</h4>
+<p>Number cards (2-10): Face value</p>
+<p>Face cards (Jack, Queen, King): 10 points</p>
+<p>Aces: 11 or 1 point (whichever is better for your hand)</p><br>
+
+<h4>Blackjack:</h4>
+<p>If your first two cards total 21, you have a Blackjack and win 1.5 times your bet instantly.</p><br>
+
+<h4>Player Choices:</h4>
+<ul>
+    <li>Hit: Take another card to try to get closer to 21.</li>
+    <li>Stay: Keep your current hand.</li>
+</ul><br>
+
+<h4>Dealer's Turn:</h4>
+<p>The dealer must hit until they reach at least 17 or bust (exceed 21).</p><br>
+
+<h4>Winning:</h4>
+<p>If the dealer busts, all remaining players win twice their bet.</p>
+<p>If the dealer does not bust, players with a higher hand than the dealer win twice their bet.</p>
+<p>Players with a hand less than the dealer's hand lose their bet.</p>
+<p>Players with a hand equall to the dealer's hand keep their bet so it's a tie.</p><br>
+
+<p><em>Enjoy the game and good luck!</em></p>
+
+{% endblock %}

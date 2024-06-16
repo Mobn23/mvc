@@ -69,7 +69,7 @@ class Game
             }
             switch ($value) {
                 case 'A':
-                    $total += ($total + 14 <= 21) ? 14 : 1;
+                    $total += ($total + 11 <= 21) ? 11 : 1;
                     break;
                 case 'J':
                 case 'Q':

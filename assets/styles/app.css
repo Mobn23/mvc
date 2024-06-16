@@ -6,7 +6,6 @@ p {
 }
 
 body {
-  background: url("../images/background.jpg");
   background-size: cover;
 }
 
@@ -208,16 +207,6 @@ ul.dicearea li {
   color: red;
 }
 
-ul.cardarea {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-ul.cardarea li {
-  display: inline;
-}
-
 .doc-images {
   display: flex;
   justify-content: center;
@@ -301,4 +290,143 @@ tr:hover {
 .quality-image img {
   width: 30%;
   height: 30%;
+}
+
+.project-body {
+  background-color: #1f0109;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.project-nav {
+  background-color: gold;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  margin: 10px auto;
+  border-radius: 15px;
+  animation: slideDown 1s ease forwards;
+}
+
+.project-nav ul li a:hover {
+  color: #ff0000;
+}
+
+.project-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.project-nav ul li {
+  margin-right: 20px;
+}
+
+.project-nav ul li a {
+  text-decoration: none;
+  color: #000;
+  opacity: 70%;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.project-nav ul li a:hover {
+  color: #ff0d00;
+  opacity: 1000%;
+}
+
+.project-main {
+  margin: 10px auto;
+  background-color: rgba(0, 30, 4, 0.884);
+  animation: slideUp 1s ease forwards;
+  color: #fff3cd;
+}
+
+.project-main h1 {
+  border-bottom: 4px double #1f0109;
+}
+
+/* Styles for the game area */
+.game-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styles for the dealer section */
+.dealer-data {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.dealer-data ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove padding to align items properly */
+}
+
+.dealer-data li {
+  margin: 5px 0;
+}
+
+/* Styles for the players section */
+.players-data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 130%;
+}
+
+.player-data {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.player-data ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove padding to align items properly */
+}
+
+.player-data li {
+  margin: 5px 0;
+}
+
+/* Additional styles for buttons */
+button {
+  margin-top: 2px;
+  padding: 1px 4px;
+  border: 2px solid gold; /* Golden border */
+  background-color: #333; /* Dark background to contrast with gold */
+  color: gold; /* Golden text color */
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #444; /* Slightly lighter dark background on hover */
+}
+
+.bet {
+  padding: 5px;
 }

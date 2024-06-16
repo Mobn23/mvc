@@ -1,0 +1,14 @@
+{% macro renderCards(hand) %}
+    <ul>
+        {% for cards in hand %}
+            {% for card in cards %}
+                {% set codePoint = card|unicode_code_point %}
+                {% if codePoint >= 127153 and codePoint <= 127183 %}
+                    <li><span class="card-red">{{ card }}</span></li>
+                {% else %}
+                    <li><span class="card">{{ card }}</span></li>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </ul>
+{% endmacro %}

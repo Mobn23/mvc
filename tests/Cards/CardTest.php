@@ -4,8 +4,6 @@ namespace App\Cards;
 
 use PHPUnit\Framework\TestCase;
 
-use function PHPUnit\Framework\assertEquals;
-
 /**
  * Test cases for class Card.
  */
@@ -26,5 +24,41 @@ class CardTest extends TestCase
 
         $res = $card->getAsString();
         $this->assertNotEmpty($res);
+    }
+
+    /**
+     * Test setting and getting card value.
+     */
+    public function testSetValueAndGetValue(): void
+    {
+        $card = new Card();
+        $card->setValue("🂢");
+
+        $res = $card->getValue();
+        $this->assertEquals("🂢", $res);
+    }
+
+    /**
+     * Test getting card value as string.
+     */
+    public function testGetAsString(): void
+    {
+        $card = new Card();
+        $card->setValue("🂢");
+
+        $res = $card->getAsString();
+        $this->assertEquals("🂢", $res);
+    }
+
+    /**
+     * Test getting all cards as string.
+     */
+    public function testGetAllCardsAsString(): void
+    {
+        $card = new Card();
+        $card->setValue("🂢");
+
+        $res = $card->getAllCardsAsString();
+        $this->assertEquals("🂢", $res);
     }
 }

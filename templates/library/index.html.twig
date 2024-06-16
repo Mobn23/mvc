@@ -38,19 +38,33 @@
             <tbody>
                 {% for book in books %}
                     <tr class="clickable-row" data-book-id="{{ book.id }}">
-                            {# {% dump(book.id) %} #}
-                            <td>{{ book.id }}</td>
-                            <td>{{ book.name }}</td>
-                            <td>{{ book.author }}</td>
-                            <td>
-                                {# Debug the value of book.image #}
-                                {# {% dump(book.image) %} #}
-                                {% if book.image %}
-                                    <img src="{{ asset(book.image) }}" alt="{{ book.name }}" width="50">
-                                {% else %}
-                                    No Image Provided
-                                {% endif %}
-                            </td>
+                        {# {% dump(book.id) %} #}
+                        <td>{{ book.id }}</td>
+                        <td>{{ book.name }}</td>
+                        <td>{{ book.author }}</td>
+                        <td>
+                            {# Debug the value of book.image #}
+                            {# {% dump(book.image) %} #}
+                            {% if book.image %}
+                                <img src="{{ asset(book.image) }}" alt="{{ book.name }}" width="50">
+                            {% else %}
+                                No Image Provided
+                            {% endif %}
+                        </td>
+
+                        <td>
+                            <form action="{{ path('update_book_form') }}" method="GET">
+                                <input type="hidden" name="bookId" value="{{ book.id }}">
+                                <button type="submit">Update</button>
+                            </form>
+                        </td>
+
+                        <td>
+                            <form action="{{ path('book_delete') }}" method="POST">
+                                <input type="hidden" name="bookId" value="{{ book.id }}">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
                     </tr>
                 {% endfor %}
             </tbody>
@@ -58,7 +72,7 @@
     </div>
     <div class="w3-bar">
         <a href="{{ path('create_book_form') }}"><button class="w3-bar-item w3-button w3-teal">Create Book</button></a>
-        <a href="{{ path('update_book_form') }}"><button class="w3-bar-item w3-button w3-blue">Update Book</button></a>
-        <a href="{{ path('delete_book_form') }}"><button class="w3-bar-item w3-button w3-red">Delete Book</button></a>
+        {# <a href="{{ path('update_book_form') }}"><button class="w3-bar-item w3-button w3-blue">Update Book</button></a>
+        <a href="{{ path('delete_book_form') }}"><button class="w3-bar-item w3-button w3-red">Delete Book</button></a> #}
     </div>
 {% endblock %}

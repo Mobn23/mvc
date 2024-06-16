@@ -30,10 +30,4 @@ class LibraryControllerTwig extends AbstractController
     {
         return $this->render('library/crud-buttons/update.book.form.twig');
     }
-
-    #[Route('/delete/book/form', name: 'delete_book_form')]
-    public function deleteBookForm(): Response
-    {
-        return $this->render('library/crud-buttons/delete.book.form.twig');
-    }
 }
