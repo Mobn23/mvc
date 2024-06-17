@@ -62,9 +62,9 @@ class Player
     }
 
     /**
-     * Get the bet amount of the player.
+     * Get the name and bet amount of the player.
      *
-     * @return array The bet amount.
+     * @return array The bet amount and the name.
      */
     public function toArray(): array
     {

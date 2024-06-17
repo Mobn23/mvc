@@ -133,8 +133,93 @@
     </ol>
 
     <h2 id="kmom10">Kmom10</h2>
-    <p>This is the report text for Kmom10.</p>
 
+    <h3>Classes(Back-end)</h3>
+    <p>För detta projektet så använde jag redan skapade klasser plus nya klasser som jag sog att de kommer att bli användbara och värdefulla till mitt projekt. Därtill hade jag skapat redan igenom kmom03 och kmom06 refactorerad och lagt till klasser så klasserna som hade jag förut var:</p>
+    <ul>
+        <li>Card</li>
+        <li>CardGraphic</li>
+        <li>CardHand</li>
+        <li>CardDeck</li>
+        <li>CardRepresentation</li>
+        <li>Game</li>
+    </ul>
+    <p>De klasserna använde jag när implementerad Kortspel 21, men nu tänkte jag ändra lite på Game klass så att göra Black Jack Rules istället. Dessutom skapade jag Player klass för att behandla värje spelare.</p>
+    <p>Så enligt korter så skapade jag  fem klasser för att behandla alla möjliga manipulationer om korter. Så hade jag gjort Inheritance mellan Card och CardGraphic så att Card är Super class och CardGraphic som Subclass.</p>
+    <p>jag valde att använda Inheritance för att det förbättrar Code Reusability, Extensibility, Organization så ger det bättre Maintainability.</p>
+    <p>Så Card klass innehåller grundläggande metoder som behandlar huvudsakligen Get, Set values.</p>
+    <p>CardGraphic extenderar Card klass och beroende på  CardRepresentation klass och på CardDeck klass. Därtill, CardGraphic's Construct länkar CardRepresentation klass med CardDeck klass, samt finns det andra metoder som extenderar The parent class's methods men anslutade till CardRepresentation t.ex getAllCardsAsString() så hämtar det alla unicode represented cards utifrån CardRepresentation. </p>
+    <p>Dessutom, innehåller det andra metoder som rollar korterna, randomCard() som draw a random card, cardsArrayCount() som räknar korter som finns inom CardDeck klass, chosenCard() och getRepresentation() som hämtar till CardRepresentation klass.</p>
+    <p>Sedan skapade jag CardHand för att behålla korter och Manipulate funktionaliteter som relevanta med Handen. Så huvudsakligen add() som tar emot CardGraphic class's object som Dependency Injection, och tänkte jag använda detta för att var det nytt för mig så kände jag att det är oerhört spännande att lära mig detta och använda.</p>
+    <p>Därtill, Dependency Injection är väldigt bra för att ger det mer Decoupling, Flexibility, och Maintainability så koden blir renare.</p>
+    <p>Förutom detta, så CardHand klass Essential metoder som behandlar att get values, string  och att räkna korter som finns inom handen getNumberCards().</p>
+    <p>Inom CardDeck klassen så använde jag Dependency Injection en gång till inom Construct  så är det ett bättre val instället att skapa många objekter.</p>
+    <p>Därförutom, innehåller CardDeck klass shuffle(),chosenCards(),cardsArrayCount() men enligt metoderna som använde i Examinationen så är de randomCard() som draw a random card och unset it from the CardRepresentation array.</p>
+    <p>CardRepresentation Klass huvudsakligen är ansvarig av korter representation så att innehåller det representation array samt med Setter och Getters metoder.</P>
+    <p>Enligt Game klass så är det ansvarig att behandla spelets funktionalitet. Därutöver, finns hand array som ska behålla korter som drawCard() retunerar, och finns det Setter, Getter och calculateHandValue() vilket returnerar totala values av handens korter. Så denna metoder implementerar cards' values. </p>
+    <p>Äntligen skapade jag Player klass som är ansvarig av skapa player objekt så tar det emot player's name och bet inom Construct, samt innehåller detta getters till name och bet och setter till bet, under tiden att retunerar toArray() name and bet som associative array.</p>
+
+    <h3>Controllers(Back-end)</h3>
+    <p>För detta Examinationen så har det Fyra Controller två till Json och två för atta koppla Modules med Views:</p>
+    <ul>
+        <li>ProjectControllerTwig</li>
+        <li>ProjectController</li>
+        <li>ProjectControllerJsonTwig</li>
+        <li>ProjectControllerJson</li>
+    </ul>
+    <p>För de som avslutar med Twig så är de bara för att koppla t.ex en View med en annan View eller redirect till annan Route med data som annan Route behöver.</p>
+    <p>ProjectControllerJson behandlar krav fyra som innehåller fem JSON Routes som testar många functionalitet av klasserna.</p>
+    <p>ProjectController vilket är den huvudliga Controller och innehåller alla huvudliga Routes som ansluta klasser med templates(eller M med V) (eller Back-end med Front-end) eller (Server-side med Client-side) och manage the project's logic.</p>
+
+    <h3>Views(Templates)(Front-end)</h3>
+    <p>För Examinationen så har jag lagt Examinations templates inom project mapp och så det innehåller:</p>
+    <ul>
+        <li>about.html.twig</li>
+        <p>Innehåller beskrivning om Black Jack spel.</p>
+        <li>api.html.twig</li>
+        <p>Innehåller krav 4 så fem Json Routes mellan Get och POST.</p>
+        <li>black.jack.html.twig</li>
+        <p>Den huvudliga Template som vissar upp hela spelet.</p>
+        <li>macros.html.twig</li>
+        <p>Innehåller macros så att minska upprepningar och förbättra Maintainability och Reusability.</p>
+        <li>players.names.html.twig</li>
+        <p>Behandlar Players names and bets.Med hjälp av Javascript så User kan väljä så mycket spelare som man vill.</p>
+        <li>projectmainpage.html.twig</li>
+        <p>Behandlar Number of Players form.</p>
+    </ul>
+    <p>Samt har jag skapat en Base fil baseproject.html.twig som innehåller the base layout.</p>
+
+    <h2>Implementation</h2>
+    <p>Jag började med att skapa Base template baseproject.html.twig och skapade en olika Styling så var det väldigt olikt, sedan skapade Controller och template projectmainpage.html.twig inom project folder så user kan välja hur många spelare ska spela, jag begränsade detta mellan 1 och 6 för att jag sog att det är vettigt annars koden fungerar med hur många som helst spelare. Sedan gjorde det att få nummret av form och skicka till via routern med players number till players.names.html.twig template.</p>
+    <p>Då loopade genom players number och skapade forms för att ta emote players' names och bets och när användaren Submits the form så data skickas vidare till Controllerna och där kan man hämta datan av Request.</p>
+    <p>Därtill, använde jag JavaScript för att update playerData with player name and bet based on input fields, Prevents default, logs playerData, serializes it, sets it in a hidden input och så kan man hämta datan inom Controllers.</p>
+    <p>Inom Controller så skapade jag start/game Route som ansluttar Game class som draw cards, ligger dem inom array sedan get the array innehåller drawn Cards och räkna deras values, med Player class som skapar en Player object som har name och bet och så skapar det Player och sen skapar Dealer object och draw random card till dealer och sedan sparar alla datan inom arrayer $gameState[] och $dealer[], seadn ligger datan i Sessionen och skicka den till och rendera project/black.jack.html.twig. </p>
+    <p>Därtill, skapade /hit/{playerName} Route för att behandla olika saker som draw en till random card, busted , done, lite Bet när player busted och beräknar handPoints.   </p>
+    <p>Sedan skapade /stay/{playerName} Route som behandlar Stay case, så implementerar om Stayed so det är done flag true (player's turn) samtidigt. </p>
+    <p>Dessutom, skapade areAllPlayersDone() metod för att förenkla koden och implementera när alla spelare klara (all turns done).</p>
+    <p>Äntligen, skapade dealerTurn() som behandlar när alla spelare done så dealer fortsätt draw cards as long as its hand < 17 och behandlar bet.</p>
+    <p>Enligt fjärde krav så skapade jag en JSON Controller och tänkte att testa funktionalitetet av projektet så att skapade jag Game state vilket kan bli användbar, så vissar det upp Player's och dealer's data.</p>
+    <p>Sedan tänkte jag skapa api/hit Route så testar man hit route(När spelaren trycker på Hit button (Draw random card))</p>
+    <p>Dessutom, skapade jag /api/dealer/turn Route så testar det dealer's turn, så att så länge så dealer är under 17 så fortsätter draw random cards. Samt visar upp dealerHand med dealerHandPoints. </p>
+    <h4>POST Routes:</h4>
+    <p>/api/start/game som testar hela spelet och börja en nytt spel, och visar upp medelande som säger att spelet lyckades att påbörja med alla players' data. </p>
+    <p>/api/create/player som testar funktionalitet att skapa en ny spelare och visa upp dess namn samt med bet.</p>
+
+    <h2>Projektet gick att genomföra</h2>
+    <p>Projektet allmänt var inte komplicerad, men jag ville att göra det professional så använde jag JavaScript och andra onödiga saker t.ex inom Styling och med mera.. Så hade jag möjlighet att göra det lättare men jag ville ta min tid och göra en professoinellt project.</p>
+    <p>Enligt project krav, så är det inte komplicerad men tar detta lång tid som vanligt, så att det innehåller mycket data på Back-end speciellt med classer (Moduler) och behövde jag implementera inom Controllers mycket samt inom templates också trotts att ville jag att undvika detta så mycket som möjligt.</p>
+    <p>Så svårighet var inte mycket men ibland man ser svårt saker t.ex när jag implementerade Javascript block så var det inte så lät.</p>
+    <p>Samt hade jag flera problem när implementerade flags för att implementera done, stayed så påverkade de andra funktionaliter och det därför skapade en metod som handlar dem äntligen.</p>
+    <p>Enligt Classer (Models) så var det ganska lät eftersom hade jag några classer redan så behövde jag fortsätta instället att Start from Scratch.</p>
+    <p>Generellt, var det väldigt spännande project så att man gör mer pro saker och förstår filerna samt med nya concepts t.ex MVC och Full-stack Framework.</p>
+
+    <h2>Mina tankar om kursen</h2>
+    <p>Jag tänker att denna kursen är en av de viktigaste kurser som jag tog redan eftersom innehåller det oerhört vördefulla Concepts som MVC och Full-stack Framework så innehåller väldigt olika Config filer som XML, Composer och package Json, Yaml...</p>
+    <p>Full-stack framework provide a comprehensive set of tools, libraries, and components that cover both the front-end (client-side) and back-end (server-side) aspects within a unified ecosystem. Det därför är det viktigt så att it's used commonly.</p>
+    <p>Kursen var lärörikt så att innehåll olika aspekter och handledningen var ganska bra men jag hade svårigheter med att förstå kraver ibland så fanns det några otydliga saker som stor inte i kraver men tog jag komplettering på dem. </p>
+    <p>Krav kan förbättras så att bli tydligare och matcha bedömningen.</p>
+    <p>Annars, allt är bra och är jag oerhört nöjd med kursen samt med nya saker jag lärt mig genom. </p>
+    <p>Självklart, ska jag rekommendera kursen till vänner så att kursen är värdefullt, och jag ger det 10 av 10 som betyg. </p>
     {% endblock %}
 
 {# To push to github:
